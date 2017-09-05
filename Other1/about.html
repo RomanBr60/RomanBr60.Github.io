@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="he">
 
@@ -9,7 +10,7 @@
 		<meta property="og:title" content="מתכונים">
 		<meta property="og:type" content="מתכונים">
 		<meta name="ROBOTS" content="index, follow">
-		<meta property="og:description" content="מתכונים">
+		<meta property="og:description" content="אודות האתר">
 		<meta property="og:site_name" content="GitHub" />
 
 		<meta property="og:locale" content="heb_IS" />
@@ -26,8 +27,9 @@
 		<!--<meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />-->
 		<TITLE>מתכונים</TITLE>
 
-		<link rel="stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
 		<link rel="stylesheet" href="CSS/jquery-ui.css">
+		<link rel="stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<link rel="stylesheet" href="CSS/bootstrap-dialog.css">
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -75,69 +77,11 @@
 			//nav.replaceWith (nav.firstChild.nextSibling);
 			</script>
 		</div>
-		
 		<div id = "bodyDiv" name = "bodyDiv" data-role = "main" class = "ui-content">
-			<h1 class="rec-title">שקשוקה 1</h1>
-			<div class = "div1 text-right" id = "div" name = "div">
-				<b>נכתב ע"י <a class = "href" href = "" onclick = "window.parent.location = this.href;"></a></b>
-				<script>
-					xmlDoc = xml();
-					var author_name = document.querySelector('meta[name="author"]').content;
-					var Author = xmlDoc.querySelector('Author[author="' + author_name +'"]');
-					var a = document.getElementsByClassName("href")[0];
-					a.href = Author.getAttribute("loc");
-					a.setAttribute("data-toggle","tooltip")
-					a.setAttribute("title", a.href);
-					a.innerHTML = author_name;
-				</script>
+			<div class="navbar-static-top" align="right" id = "div" name = "div">
+					<h1 class="big-title">אודות האתר</h1>
 			</div>
-
-			<table class="navbar-right" style="margin-right: 105px;">
-				<tr><th colspan = "4"/><th>:מצרכים</th></tr>
-				<tr><td colspan = "2"/><td>בצל קצוץ דק</td><td width = "45em">1</td><td /></tr>
-				<tr><td colspan = "2"/><td>פלפל חריף קצוץ דק לפי הטעם</td><td colspan = "2"/></tr>
-				<tr><td colspan = "2"/><td>רבע גמבה קצוצה לחתיכות קטנות</td><td colspan = "2"/></tr>
-				<tr><td colspan = "2"/><td>עגבניות קצוצות דק</td><td>2 - 3</td><td /></tr>
-				<tr><td colspan = "2"/><td>שיני שום כתושות או קצוצות</td><td>2 - 5</td><td /></tr>
-				<tr><td colspan = "2"/><td>ביצים</td><td>3 - 4</td><td /></tr>
-				<tr><td colspan = "2"/><td>כף רסק עגבניות</td><td colspan = "2"/></tr>
-				<tr><td colspan = "2"/><td>מעט מים בשביל הרוטב</td><td colspan = "2"/></tr>
-				<tr><td colspan = "2"/><td>תבלינים: מלח, פפריקה, פלפל שחור, מעט סוכר לפי הטעם</td><td colspan = "2"/></tr>
-
-				<tr><td colspan = "2"/><td><BR/></td><td colspan = "2"/></tr>
-					
-				<tr><th colspan = "4"/><th>:אופן ההכנה</th></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >מטגנים את הבצל והפלפלים על במחבט בגודל בינוני על אש בינונית-נמוכה</td><td colspan = "2"> .1</td></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >אחרי כ5-10 דקות מוסיפים את הגמבות</td><td colspan = "2"> .2</td></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >אחרי כ5-10 דקות מוסיפים את השום</td><td colspan = "2"> .3</td></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >אחרי כ5 דקות של טיגון מוסיפים את העגבניות והתבלינים</td><td colspan = "2"> .4</td></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >אחרי כ5-10 דקות, מוסיפים את רסק העגבניות, מעט מים ומכסים את המחבת. מבשלים עוד כ5-7 דקות לריכוך מלא של העגבניות</td><td colspan = "2"> .5</td></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >יוצרים גומות, שוברים בזעירות את הביצים ומכסים</td><td colspan = "2"> .6</td></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >לקבלת ביצים רכות מבשלים כ5 דקות, ולקבלת ביצים קשות מבשלים כ10 דקות</td><td colspan = "2"></td></tr>
-
-				<tr><td colspan = "2"/><td><BR/></td><td colspan = "2"/></tr>
-				<tr><th colspan = "2"></th><td>אם הרוטב בעל חמיצות של עגבניות, ניתן לשים מעט סוכר</td><th /><th>:הערות</th></tr>
-			</table>
-			
-			<div id="facebook-section">
-				<div class="fb-like" data-share="true" style="zIndex:1000"
-				data-width="100%" data-show-faces="true"></div>
-			</div>
-			<script>
-			setTimeout(function() {
-				var fbDiv = document.querySelector("#facebook-section");
-				var fbCommentsDiv = document.querySelector("#facebook-section .fb-comments");
-				fbCommentsDiv && fbDiv.removeChild(fbCommentsDiv);
-				fbCommentsDiv = document.createElement("div");
-				fbCommentsDiv.setAttribute('class', 'fb-comments');
-				fbCommentsDiv.setAttribute('data-href', location.href);
-				fbCommentsDiv.setAttribute('data-width', '100%');
-				fbDiv.appendChild(fbCommentsDiv);
-				FB.XFBML.parse();
-			}, 100);
-			</script>
 		</div>
-		
 		<div id = "footer" name = "footer" data-role = "footer">
 			<script>
 			var fileName = location.href.split("/").pop();
@@ -165,7 +109,6 @@
 			
 			$('.typeahead').typeahead();
 		</script>
-
 		</div>
 	</body>
 </html>

@@ -54,19 +54,19 @@ nav {
 
  /*RECEPT BODY*/
  /*------------------------------------------------------------------------------------------------*/
- .text, .h1 {
+ .text, .rec-title, .big-title {
 	text-shadow: -2px -1px 0 black;
 	letter-spacing: 3px;
 	color: silver; 
 }
 
-.h1, th, .th, .href {
+.rec-title, .big-title, th, .th, .href {
 	text-decoration: underline;
 }
 
-.h1 , th, .th { font-family: Georgia, serif; font-style: italic; }
+.rec-title, th, .th { font-family: Georgia, serif; font-style: italic; }
 
-.h1 {
+.rec-title {
 	text-align: center;
 	font-size: 2em;
 	padding-top: 0;
@@ -76,6 +76,13 @@ nav {
 	top: 0px;
 	background-color: #555;
 	width: 100%;
+}
+
+.big-title {
+	text-align: center;
+	margin-top: 5px;
+	padding-top: 0;
+	padding-bottom: 5px;
 }
 
 th, .th, td, dl, dt, dd, ul, li { text-align: right; }
