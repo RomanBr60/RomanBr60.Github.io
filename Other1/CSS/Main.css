@@ -31,12 +31,7 @@ footer span {
 }
 
 .social {
-  vertical-align: bottom !important;
-}
-
-#___plusone_0, #___plus_0, .fb-like, #tweetBtn {
-    display:inline !important;   
-    vertical-align: bottom !important;
+  vertical-align: middle !important;
 }
 
 .dropdown-item:hover { background-color: lightgrey; }
