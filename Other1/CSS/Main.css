@@ -34,7 +34,7 @@ footer span {
   vertical-align: middle !important;
 }
 
-#___plusone_0, #___plus_0, .fb-like, #tweetBtn {
+#___plusone_0, #___plus_0, .fb-like, #tweetBtn, .g-plus, .g-plusone {
    float: left;
    display: inline-block;
    padding: 0px;
