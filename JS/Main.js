@@ -11,37 +11,70 @@
 			}, 500);*/
 		}
 		catch (e) { alert(e); }
+		xmlDoc = xml();
+
 	}
 	
-	function load_programme () {
-		if (!location.search.includes("?")) {
-			location.replace("index.html?Rec=" + window.btoa("home.html") + "&qwe=hrz");
-			return;
-		}
-		var fileName = getParamValue("Rec");
-		var qwe = getParamValue("qwe");
-		
-		if (getParamValue("search") != undefined) {
-			search = decodeURI(decodeURI(getParamValue("search"))); 
-			iframe = document.getElementsByTagName("iframe")[0];
-			iframe.src = "search.html" + "?search=" + encodeURI(search);
-			load_menu();
-			return;
-		}
-		
-		if ((fileName != undefined) && (qwe == "hrz")) {
-			iframe = document.getElementsByTagName("iframe")[0];
-			iframe.src = window.atob(fileName) + "?qwe=hrz";
-			load_menu();
-			return;
-		}
-		
-		else {
-			fileName = (fileName != undefined) ? fileName : window.btoa("home.html");
-			location.replace("index.html?Rec=" + fileName + "&qwe=hrz");
-		}
-	}
+		window.twttr = (function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0],
+		t = window.twttr || {};
+		if (d.getElementById(id)) return t;
+		js = d.createElement(s);
+		js.id = id;
+		js.src = "https://platform.twitter.com/widgets.js";
+		fjs.parentNode.insertBefore(js, fjs);
+
+		t._e = [];
+		t.ready = function(f) {
+			t._e.push(f);
+		};
+
+		return t;
+	}(document, "script", "twitter-wjs"));
 	
+	function xml () {
+		function getXMLHttpRequest() 
+		{
+			if (window.XMLHttpRequest) {
+				return new window.XMLHttpRequest;
+			}
+			else {
+				try {
+					return new ActiveXObject("MSXML2.XMLHTTP.3.0");
+				}
+				catch(ex) {
+					return null;
+				}
+			}
+		}
+			
+		xmlhttp = getXMLHttpRequest();
+		xmlhttp.open("GET", "Other/list.xml", false);
+		xmlhttp.send();
+		return xmlhttp.responseXML;
+	}
+
+	function getHTML (fileName) {
+		function getXMLHttpRequest() {
+			if (window.XMLHttpRequest) {
+				return new window.XMLHttpRequest;
+			}
+			else {
+				try {
+					return new ActiveXObject("MSXML2.XMLHTTP.3.0");
+				}
+				catch(ex) {
+					return null;
+				}
+			}
+		}
+				
+		xmlhttp = getXMLHttpRequest();
+		xmlhttp.open("GET", fileName, false);
+		xmlhttp.send();
+		return xmlhttp.responseText;
+	}
+
 	function load_menu() {
 		xmlDoc = xml();
 		Type = xmlDoc.getElementsByTagName("Type");
@@ -109,15 +142,43 @@
 			 ((val3 == null) || (val3 == undefined) || (val3.length == 0)) ){
 			
 			BootstrapDialog.show({title:"חיפוש", message:"לא נמצאו ערכי החיפוש"});
+			//alert ("לא נמצאו ערכי החיפוש");
 			return;
 		}
 
 		
-		var loc = "index.html?search=" + encodeURI(encodeURI(txt));
-		window.location = loc;
+		//var loc = "index.html?search=" + encodeURI(encodeURI(txt));
+		//window.location = loc;
+		BootstrapDialog.show({title:"חיפוש", message:"כן נמצאו ערכי החיפוש"});
 	}
 
 	function cnt() {
 		var Rec = xmlDoc.querySelectorAll('Rec[tag*=","]');
 		return (Rec.length);
+	}
+
+	function getParamValue(paramName) {
+		var url = window.location.search.substring(1); //get rid of "?" in querystring
+		var qArray = url.split('&'); //get key-value pairs
+		for (var i = 0; i < qArray.length; i++) 
+		{
+			var pArr = qArray[i].split('='); //split key and value
+			if (pArr[0] == paramName) 
+				return pArr[1]; //return value
+		}
+	}
+
+	if (!String.prototype.includes) {
+		String.prototype.includes = function(search, start) {
+		'use strict';
+			if (typeof start !== 'number') {
+			  start = 0;
+			}
+		
+			if (start + search.length > this.length) {
+				return false;
+			} else {
+				return this.indexOf(search, start) !== -1;
+			}
+		};
 	}
