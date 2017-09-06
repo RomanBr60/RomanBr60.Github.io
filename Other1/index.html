@@ -36,7 +36,13 @@
 		
 		<link rel="stylesheet" href="CSS/Main.css">
 		
-		<script type = "text/javascript" src = "https://apis.google.com/js/platform.js" async = "true"></script>		
+		<script >
+		  window.___gcfg = {
+			lang: 'iw',
+			parsetags: 'onload'
+		  };
+		</script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		<script type = "text/javascript" src = "JS/Main.js"></script>		
 
 		<!--<script type = "text/javascript" src = "JS/sweetalert-dev.js"></script>
@@ -138,8 +144,6 @@
 		<script type = "text/javascript" src = "JS/bootstrap-dialog.js"></script>
 		
 		<script>
-			window.___gcfg = {lang: 'iw'};
-
 			var body = document.getElementsByTagName("body")[0];
 			var Bottom = document.getElementsByTagName("footer")[0];
 			var Top = document.getElementsByTagName("nav")[0];
