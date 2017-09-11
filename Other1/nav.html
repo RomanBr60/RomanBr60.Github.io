@@ -21,8 +21,9 @@
 							</a>
 						</li>
 						<li>
-							<a data-toggle="tooltip" title = "תפריט" href="menu.html">
-								<span>תפריט</span>
+							<a data-toggle="tooltip" title = "תפריט מתכונים" href="menu.html" style = "margin-right: -10px;;">
+								<span>תפריט מתכונים</span>
+								<span data-toggle="tooltip" title = "" class="badge" id = "cntRec" name = "cntRec"></span>
 							</a>
 						</li>
 					</ul>
@@ -35,9 +36,9 @@
 							</select> -->
 							<div class="input-group" title = "חיפוש">
 								<input type="text" class="form-control" placeholder = "חיפוש" data-provide="typeahead"
-								id = "search_text" name = "search_text" style = "border-radius: 0; text-align: right; margin-left: -4px;"/>
+								id = "search_text" name = "search_text" style = "border-radius: 0; margin-left: -4px;"/>
 								<div class="input-group-btn">
-									<button class="btn btn-default" data-toggle="tooltip" title = "שלח" style = "margin-left: -4px;" 
+									<button class="btn btn-default" data-toggle="tooltip" title = "שלח" style = "margin-left: -4px; margin-right: -11px;" 
 									onclick = "Search(search_text.value);">
 										<i class="glyphicon glyphicon-search"></i>
 									</button>

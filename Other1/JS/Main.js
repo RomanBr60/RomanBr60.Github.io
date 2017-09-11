@@ -1,4 +1,4 @@
-	var xmlDoc, Type ;
+	var xmlDoc = "", Type ;
 	
 	window.onload = function () {
 		try {  
@@ -12,7 +12,6 @@
 		}
 		catch (e) { alert(e); }
 		xmlDoc = xml();
-
 	}
 	
 		window.twttr = (function(d, s, id) {
@@ -147,12 +146,11 @@
 		}
 
 		
-		//var loc = "index.html?search=" + encodeURI(encodeURI(txt));
-		//window.location = loc;
-		BootstrapDialog.show({title:"חיפוש", message:"כן נמצאו ערכי החיפוש"});
+		var loc = "search.html?search=" + encodeURI(encodeURI(txt));
+		window.location = loc;
 	}
 
-	function cnt() {
+	var cnt = function() {
 		var Rec = xmlDoc.querySelectorAll('Rec[tag*=","]');
 		return (Rec.length);
 	}

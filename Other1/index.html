@@ -37,13 +37,14 @@
 		
 		<link rel="stylesheet" href="CSS/Main.css">
 		
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		<script >
 		  window.___gcfg = {
 			lang: 'iw',
 			parsetags: 'onload'
 		  };
 		</script>
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 		<script type = "text/javascript" src = "JS/Main.js"></script>		
 
 		<!--<script type = "text/javascript" src = "JS/sweetalert-dev.js"></script>
@@ -81,15 +82,18 @@
 			<script>
 			nav.innerHTML = getHTML("nav.html");
 			//nav.replaceWith (nav.firstChild.nextSibling);
+		//document.getElementById('cntRec').innerHTML = '12';
 			</script>
 		</div>
 		
 		<div id = "bodyDiv" name = "bodyDiv" data-role = "main" class = "ui-content">
 			<h1 class="rec-title">שקשוקה 1</h1>
 			<div class = "div1 text-right" id = "div" name = "div">
-				<b>נכתב ע"י <a class = "href" href = "" onclick = "window.parent.location = this.href;"></a></b>
+				<b>נכתב ע"י <a class = "href" href = "" onclick = "window.parent.location = this.href;">
 				<script>
-					xmlDoc = xml();
+					var xmlDoc = xml();
+					cntRec.innerHTML = cnt();
+					cntRec.title = cntRec.innerHTML + " - מתכונים";
 					var author_name = document.querySelector('meta[name="author"]').content;
 					var Author = xmlDoc.querySelector('Author[author="' + author_name +'"]');
 					var a = document.getElementsByClassName("href")[0];
@@ -98,6 +102,7 @@
 					a.setAttribute("title", a.href);
 					a.innerHTML = author_name;
 				</script>
+				</a></b>
 			</div>
 
 			<table class="navbar-right" style="margin-right: 105px;">
@@ -150,8 +155,6 @@
 			var Top = document.getElementsByTagName("nav")[0];
 			bodyDiv.style.paddingTop = (Top.offsetHeight - 1) + "px";
 			bodyDiv.style.paddingBottom = (Bottom.offsetHeight - 1) + "px";
-			
-			$('.typeahead').typeahead();
 		</script>
 
 		</div>

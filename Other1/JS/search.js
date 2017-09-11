@@ -1,36 +1,65 @@
-	var xmlDoc = xml ();
-	var Type = xmlDoc.getElementsByTagName("Type");
+	var xmlDoc, Type;
 
-	/*window.onload = function () {
-		if ((getParamValue("qwe") == undefined) || (getParamValue("search") == undefined)) {
-			window.location = "index.html?Rec=" + window.btoa("home.html") + "&qwe=hrz";		
-		}
-		
-	}*/
-	
-	function load_Menu () {
-		var len = Type.length - 1;
-		var len1 = 12 / len;
-		var txt;
-		try {
-			for (i = len; i >= 1; i--) {
-				txt = "<h3 class ='b' style='margin-top: 0px;'>:" + Type[i].getAttribute("name") + "</h3>";
+	function load_menu1() {
+		xmlDoc = xml();
+		Type = xmlDoc.getElementsByTagName("Type");
+		for (i = 1; i < Type.length; i++) {
+			var nameE = Type[i].childNodes[0].nodeValue;
+			var nameH = Type[i].getAttribute("name");
+
+			var a = document.createElement("a");
+			a.setAttribute("href", "javascript:void(0);");
+			a.setAttribute("class","list-group-item text-right"); 
+			a.setAttribute("data-toggle","collapse");
+			a.setAttribute("data-target","#menu_rec" + i); 
+			a.setAttribute("data-parent","#menu_rec");
+			a.setAttribute("title",nameH);
+			
+			type_name = xmlDoc.querySelector('Rec[type="' + nameE +'"]');
+			if (type_name != null) {
+				type_name1 = type_name.childNodes;
+				
+				var span = document.createElement("span");
+				span.setAttribute("class","label label-info");
+				span.innerHTML = (type_name1.length - 1) / 2
+				
+				a.innerHTML+=nameH + "&nbsp;"
+				a.appendChild(span);
+				menu_rec.appendChild(a);			
+				
 				var div = document.createElement("div");
-				div.setAttribute("class", "text-right col-xs-" + len1 + " col-sm-" + len1 + " col-md-" + len1 +  "col-lg-" + len1);
-				div.setAttribute("style", "width=100%;");
-				div.innerHTML = txt;
-				var div1 = document.createElement("div");
-				div1.setAttribute("id", "doc" + i);
-				div1.setAttribute("name", "doc" + i);
-				div1.setAttribute("style", "width=100%;");
-				div.appendChild(div1)
-				document.getElementById("row").appendChild(div);
+				div.setAttribute("id", "menu_rec" + i);
+				div.setAttribute("class", "sublinks collapse text-right");
+
+				for (j = 2; j <= type_name1.length; j+=2) {
+					var Name2 = (type_name.childNodes[j-1].childNodes[0].nodeValue);
+					var a = document.createElement("a");
+					a.setAttribute("href", nameE + (j/2) +  ".html");
+					a.setAttribute("class","list-group-item small href");
+					a.setAttribute("title", Name2);
+					
+					var span = document.createElement("span");
+					span.setAttribute("class","glyphicon glyphicon-chevron-left");
+					span.setAttribute("style","margin-right: 3em;");
+					
+					
+					var txt = document.createTextNode(Name2);         // Create a text node
+					
+					//a.innerHTML = "<span class="glyphicon glyphicon-chevron-left"></span>" + Name2;
+					a.appendChild(txt);
+					a.appendChild(span);
+					
+					div.appendChild(a);
+				}
+				menu_rec.appendChild(div);
 			}
-		}
-		catch (e) { alert (e); }
+			
+		}	
 	}
 	
-	function Search (txt) {
+	function load_search_menu (txt) {
+		xmlDoc = xml();
+		Type = xmlDoc.getElementsByTagName("Type");
 		function Search_by_attr (tag, txt) {
 			var output_txt = "";
 			try {
@@ -44,17 +73,54 @@
 					var nameH = Type[i].getAttribute("name");
 					type_name = xmlDoc.querySelector('Rec[type="' + nameE +'"]');
 					val = type_name.querySelectorAll('Rec[' + tag + '*="' + txt + '"]');
+
+					var a = document.createElement("a");
+					a.setAttribute("href", "javascript:void(0);");
+					a.setAttribute("class","list-group-item text-right"); 
+					a.setAttribute("data-toggle","collapse");
+					a.setAttribute("data-target","#menu_rec" + i); 
+					a.setAttribute("data-parent","#menu_rec");
+					a.setAttribute("title", val.length + " - " + nameH);
+					
+					var span = document.createElement("span");
+					span.setAttribute("class","label label-info");
+					span.innerHTML = val.length;
+					
+					a.innerHTML+=nameH + "&nbsp;"
+					a.appendChild(span);
+					menu_rec.appendChild(a);			
+					
+					var div = document.createElement("div");
+					div.setAttribute("id", "menu_rec" + i);
+					div.setAttribute("class", "sublinks collapse text-right");
+
+					
 					if (val.length > 0) {
 						for (j = 0; j < val.length; j++) {
 							var Name2 = val.item(j).childNodes[0].nodeValue;
-							
 							var ind = Array.from (type_name.childNodes).indexOf(val.item(j));
+							//output_txt += "<a href = '" + nameE + Math.ceil(ind / 2) + ".html' class = 'text'><h4>" + Name2 + "</h4></a>";
+							var a = document.createElement("a");
+							a.setAttribute("href", nameE + Math.ceil(ind / 2) +  ".html");
+							a.setAttribute("class","list-group-item small href");
+							a.setAttribute("title", Name2);
 							
-							output_txt += "<a href = '" + nameE + Math.ceil(ind / 2) + ".html' class = 'text'><h4>" + Name2 + "</h4></a>";
+							var span = document.createElement("span");
+							span.setAttribute("class","glyphicon glyphicon-chevron-left");
+							span.setAttribute("style","margin-right: 3em;");
+							
+							
+							//var txt = document.createTextNode(Name2);         // Create a text node
+							
+							//a.innerHTML = "<span class="glyphicon glyphicon-chevron-left"></span>" + Name2;
+							a.appendChild(document.createTextNode(Name2));
+							a.appendChild(span);
+							
+							div.appendChild(a);
+
 						}
-						setTxt(output_txt, i);
+						menu_rec.appendChild(div);
 					}
-					else setTxt("", i);
 				}
 				return true;
 			}
@@ -67,30 +133,76 @@
 				if ((Type1 == null) || (Type1 == undefined) || (Type1.length == 0)) {
 					return false;
 				}
-	
-				var ind = Array.from (Type).indexOf(Type1);
-				for (j = 1; j < Type.length; j++) {
-					if (j == ind) {
-						var Type_Name = Type1.childNodes[0].nodeValue;
-						Type1  = xmlDoc.querySelector('Rec[type="' + Type_Name +'"]');
-						var Elem = Type1.childNodes;
-						var output_txt = "";
-						for (i = 1; i < Elem.length; i+=2) {
-							var Elem_Name = Elem[i].childNodes[0].nodeValue;
-							output_txt += "<a href = '" + Type_Name + Math.ceil(i / 2) + ".html' class = 'text'><h4>" + Elem_Name + "</h4></a>";
+				
+				var nameE0 = Type1.childNodes[0].nodeValue;
+				alert(nameE0);
+				
+				var Type2 = xmlDoc.getElementsByTagName("Type");
+			
+				for (i = 1; i < Type.length; i++) {
+					var nameE = Type[i].childNodes[0].nodeValue;
+					var nameH = Type[i].getAttribute("name");
+
+					var a = document.createElement("a");
+					a.setAttribute("href", "javascript:void(0);");
+					a.setAttribute("class","list-group-item text-right"); 
+					a.setAttribute("data-toggle","collapse");
+					a.setAttribute("data-target","#menu_rec" + i); 
+					a.setAttribute("data-parent","#menu_rec");
+				
+					type_name = xmlDoc.querySelector('Rec[type="' + nameE +'"]');
+					if ((type_name != null) && (nameE == nameE0)) {
+						type_name1 = type_name.childNodes;
+						
+						var span = document.createElement("span");
+						span.setAttribute("class","label label-info");
+						span.innerHTML = (type_name1.length - 1) / 2
+						
+						a.innerHTML+=nameH + "&nbsp;"
+						a.appendChild(span);
+						menu_rec.appendChild(a);			
+						
+						var div = document.createElement("div");
+						div.setAttribute("id", "menu_rec" + i);
+						div.setAttribute("class", "sublinks collapse text-right");
+
+						for (j = 2; j <= type_name1.length; j+=2) {
+								var Name2 = (type_name.childNodes[j-1].childNodes[0].nodeValue);
+								var a = document.createElement("a");
+								a.setAttribute("href", nameE + (j/2) +  ".html");
+								a.setAttribute("class","list-group-item small href");
+								a.setAttribute("title", Name2);
+								
+								var span = document.createElement("span");
+								span.setAttribute("class","glyphicon glyphicon-chevron-left");
+								span.setAttribute("style","margin-right: 3em;");
+								
+								
+								var txt = document.createTextNode(Name2);         // Create a text node
+							
+								//a.innerHTML = "<span class="glyphicon glyphicon-chevron-left"></span>" + Name2;
+								a.appendChild(txt);
+								a.appendChild(span);
+							
+							div.appendChild(a);
 						}
-						setTxt(output_txt, j);
+						menu_rec.appendChild(div);
 					}
-					else setTxt("", j);
+					
+					else if (nameE != nameE0) {
+						var span = document.createElement("span");
+						span.setAttribute("class","label label-info");
+						span.innerHTML = "0";
+						
+						a.innerHTML+=nameH + "&nbsp;"
+						a.appendChild(span);
+						menu_rec.appendChild(a);			
+					}
 				}
 				return true;
 			}
 			catch (e) { alert (e); return false; }
 		}	
-		
-		function setTxt (txt, i) {
-			document.getElementById(("doc" + i)).innerHTML = txt;
-		}
-		
+	
 		if ( !(Search_by_attr ("tag", txt) || Search_by_attr ("author", txt) || Search_by_Type (txt)) ) alert ("לא נמצאו ערכי החיפוש");
 	}

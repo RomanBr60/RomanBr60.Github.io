@@ -56,7 +56,7 @@ footer span {
 	color: silver; 
 }
 
-.rec-title, .big-title, th, .th, .href {
+.rec-title, .big-title, th, .th, .href:active {
 	text-decoration: underline;
 }
 
@@ -127,4 +127,9 @@ td { font-size: 1.15em; }
 { 
 	width: 100%;
 	height: 100%;
+}
+
+#menu_rec { 
+	width: 350px; 
+	margin-right: 55px;
 }

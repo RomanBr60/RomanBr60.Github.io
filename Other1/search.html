@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="he">
 
@@ -10,7 +9,7 @@
 		<meta property="og:title" content="מתכונים">
 		<meta property="og:type" content="מתכונים">
 		<meta name="ROBOTS" content="index, follow">
-		<meta property="og:description" content="אודות האתר">
+		<meta property="og:description" content="מתכונים">
 		<meta property="og:site_name" content="GitHub" />
 
 		<meta property="og:locale" content="heb_IS" />
@@ -27,18 +26,26 @@
 		<!--<meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />-->
 		<TITLE>מתכונים</TITLE>
 
-
-		<link rel="stylesheet" href="CSS/jquery-ui.css">
 		<link rel="stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<link rel="stylesheet" href="CSS/jquery-ui.css">
 		<link rel="stylesheet" href="CSS/bootstrap-dialog.css">
 
+		<link rel="stylesheet" href="http://getbootstrap.com/assets/css/docs.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		
 		<link rel="stylesheet" href="CSS/Main.css">
 		
-		<script type = "text/javascript" src = "https://apis.google.com/js/platform.js" async = "true"></script>		
+		<script >
+		  window.___gcfg = {
+			lang: 'iw',
+			parsetags: 'onload'
+		  };
+		</script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		<script type = "text/javascript" src = "JS/Main.js"></script>		
+		<script type = "text/javascript" src = "JS/search.js"></script>		
 
 		<!--<script type = "text/javascript" src = "JS/sweetalert-dev.js"></script>
 		<link rel="stylesheet" href="CSS/sweetalert.css">
@@ -75,16 +82,32 @@
 			<script>
 			nav.innerHTML = getHTML("nav.html");
 			//nav.replaceWith (nav.firstChild.nextSibling);
+			//document.getElementById('cntRec').innerHTML = '12';
 			</script>
 		</div>
+		
 		<div id = "bodyDiv" name = "bodyDiv" data-role = "main" class = "ui-content">
-			<div class="navbar-static-top" align="right" id = "div" name = "div">
-					<h1 class="big-title">אודות האתר</h1>
+			<h1 class="big-title">תפריט מתכונים</h1>
+			<div class="panel list-group navbar-right" id="menu_rec" name = "menu_rec">
+			 <!--<a href="javascript:void(0);" class="list-group-item" data-toggle="collapse" data-target="#sm" data-parent="#menu">MESSAGES <span class="label label-info">5</span> <span class="glyphicon glyphicon-envelope pull-right"></span></a>
+			 <div id="sm" class="sublinks collapse">
+			  <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> inbox</a>
+			  <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> sent</a>
+			  <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-left"></span> garbage</a>-->
+			
+				<script>
+				var search = getParamValue("search");
+				search = decodeURI(decodeURI(search));
+				search_text.value = search;
+				load_search_menu(search);
+				</script>
 			</div>
 		</div>
+		
 		<div id = "footer" name = "footer" data-role = "footer">
 			<script>
 			var fileName = location.href.split("/").pop();
+			fileName = fileName.split("?")[0];
 			var html = getHTML("footer.html").replace(new RegExp("index.html", 'g'), fileName);
 			footer.innerHTML = html;
 			//footer.replaceWith (footer.firstChild.nextSibling);
@@ -99,13 +122,11 @@
 		<script type = "text/javascript" src = "JS/bootstrap-dialog.js"></script>
 		
 		<script>
-			window.___gcfg = {lang: 'iw'};
-
-			var body = document.getElementsByTagName("body")[0];
-			var Bottom = document.getElementsByTagName("footer")[0];
-			var Top = document.getElementsByTagName("nav")[0];
-			bodyDiv.style.paddingTop = (Top.offsetHeight - 1) + "px";
-			bodyDiv.style.paddingBottom = (Bottom.offsetHeight - 1) + "px";
+		var body = document.getElementsByTagName("body")[0];
+		var Bottom = document.getElementsByTagName("footer")[0];
+		var Top = document.getElementsByTagName("nav")[0];
+		bodyDiv.style.paddingTop = (Top.offsetHeight - 1) + "px";
+		bodyDiv.style.paddingBottom = (Bottom.offsetHeight - 1) + "px";
 		</script>
 		</div>
 	</body>
