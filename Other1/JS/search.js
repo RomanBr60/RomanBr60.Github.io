@@ -20,7 +20,8 @@
 				type_name1 = type_name.childNodes;
 				
 				var span = document.createElement("span");
-				span.setAttribute("class","label label-info");
+				//span.setAttribute("class","label label-info navbar-left");
+				span.setAttribute("class","badge navbar-left");
 				span.innerHTML = (type_name1.length - 1) / 2
 				
 				a.innerHTML+=nameH + "&nbsp;"
@@ -43,7 +44,7 @@
 					span.setAttribute("style","margin-right: 3em;");
 					
 					
-					var txt = document.createTextNode(Name2);         // Create a text node
+					var txt = document.createTextNode(Name2 + " ");         // Create a text node
 					
 					//a.innerHTML = "<span class="glyphicon glyphicon-chevron-left"></span>" + Name2;
 					a.appendChild(txt);
@@ -205,4 +206,10 @@
 		}	
 	
 		if ( !(Search_by_attr ("tag", txt) || Search_by_attr ("author", txt) || Search_by_Type (txt)) ) alert ("לא נמצאו ערכי החיפוש");
+	}
+	
+	function res_cnt(search) {
+		var SearchTag = xmlDoc.querySelectorAll('Type[name ="' + search + '"], Rec[tag *="' + search + '"], Rec[author ="' + search + '"]');
+												
+		return SearchTag.length;
 	}

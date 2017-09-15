@@ -88,12 +88,18 @@
 		
 		<div id = "bodyDiv" name = "bodyDiv" data-role = "main" class = "ui-content">
 			<h1 class="big-title">תפריט מתכונים</h1>
-			<div class="panel list-group navbar-right" id="menu_rec" name = "menu_rec">
+			<div class="panel list-group navbar-center" id="menu_rec" name = "menu_rec">
 			 <!--<a href="javascript:void(0);" class="list-group-item" data-toggle="collapse" data-target="#sm" data-parent="#menu">MESSAGES <span class="label label-info">5</span> <span class="glyphicon glyphicon-envelope pull-right"></span></a>
 			 <div id="sm" class="sublinks collapse">
 			  <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> inbox</a>
 			  <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> sent</a>
 			  <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-left"></span> garbage</a>-->
+			<div class = "list-group-item active text-center" class="list-group-item" name = "rec_num" id = "rec_num">
+				<script>
+				var xmlDoc = xml();
+				rec_num.innerHTML = " נמצאו " + cnt() + " מתכונים ";
+				</script>
+			</div>
 			
 				<script>
 				load_menu1();

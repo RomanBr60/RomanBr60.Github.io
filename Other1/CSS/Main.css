@@ -56,7 +56,7 @@ footer span {
 	color: silver; 
 }
 
-.rec-title, .big-title, th, .th, .href:active {
+.rec-title, .big-title, th, .th, .href:hover {
 	text-decoration: underline;
 }
 
@@ -83,7 +83,7 @@ footer span {
 
 th, .th, td, dl, dt, dd, ul, li { text-align: right; }
 th, .th { font-size: 1.45em; color: #AA1F23; }
-td { font-size: 1.15em; }
+td, #rec_num { font-size: 1.15em; }
 
 .href, .href:hover, .href:active { color: black; }
 #link { margin-top: -7px; 
@@ -131,5 +131,18 @@ td { font-size: 1.15em; }
 
 #menu_rec { 
 	width: 350px; 
-	margin-right: 55px;
+	/*margin-right: 55px;*/
+}
+
+#menu_recm, #menu_rec .list-group-item {
+	border-style: solid;
+    border-color: silver;
+}
+
+/* CSS Frame work*/
+.navbar-center {
+	float: none;
+	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 }
