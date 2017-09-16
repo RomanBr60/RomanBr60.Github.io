@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+﻿<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="he">
 
 	<head>
@@ -26,35 +26,28 @@
 		<!--<meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />-->
 		<TITLE>מתכונים</TITLE>
 
-		<link rel="stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
 		<link rel="stylesheet" href="CSS/jquery-ui.css">
+		<link rel="stylesheet" href="CSS/jquery.mobile-1.4.5.min.js.css">
 		<link rel="stylesheet" href="CSS/bootstrap-dialog.css">
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-		
+		<link rel="stylesheet" href="CSS/docs.css">
+
 		<link rel="stylesheet" href="CSS/Main.css">
 		
-		<script >
-		  window.___gcfg = {
-			lang: 'iw',
-			parsetags: 'onload'
-		  };
-		</script>
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
-		<script type = "text/javascript" src = "JS/Main.js"></script>		
-
+		<script type = "text/javascript" src = "https://apis.google.com/js/platform.js" async = "true"></script>		
+		<script type = "text/javascript" src = "JS/Main0.js"></script>		
+		<script type = "text/javascript" src = "JS/Main.js"></script>
+		
 		<!--<script type = "text/javascript" src = "JS/sweetalert-dev.js"></script>
 		<link rel="stylesheet" href="CSS/sweetalert.css">
 		<link rel="stylesheet" href="CSS/facebook.css">-->
 
-		<!--[if lt IE 9]>
-		<script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->		
+		
 	</head>
-	<body>
+	<body data-spy="scroll" data-target=".navbar-static-top" data-twttr-rendered="true">
 		<div id="fb-root"></div>
 		<script>
 		 window.fbAsyncInit = function() {
@@ -74,85 +67,120 @@
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 		</script>
-		<div data-role = "page" id = "pageone">
-		
-		<div id = "nav" name = "nav" data-role = "header">
-			<script>
-			nav.innerHTML = getHTML("nav.html");
-			//nav.replaceWith (nav.firstChild.nextSibling);
-			</script>
-		</div>
-		
-		<div id = "bodyDiv" name = "bodyDiv" data-role = "main" class = "ui-content">
-			<h1 class="rec-title">שקשוקה 1</h1>
-			<div class = "div1 text-right" id = "div" name = "div">
-				<b>נכתב ע"י <a class = "href" href = "" onclick = "window.parent.location = this.href;"></a></b>
-				<script>
-					xmlDoc = xml();
-					var author_name = document.querySelector('meta[name="author"]').content;
-					var Author = xmlDoc.querySelector('Author[author="' + author_name +'"]');
-					var a = document.getElementsByClassName("href")[0];
-					a.href = Author.getAttribute("loc");
-					a.setAttribute("data-toggle","tooltip")
-					a.setAttribute("title", a.href);
-					a.innerHTML = author_name;
-				</script>
+	
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-toggle="tooltip" title = "תפריט ניווט">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!--<a class="navbar-brand" href="javascript:void(0);" onclick = "hideshowBlogMenu();">-->
+					<a class="navbar-brand" href="javascript:void(0);">
+						<span class="glyphicon glyphicon-menu-hamburger"></span>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a data-toggle="tooltip" title = "דף הבית" id = "Home" name = "Home" href="home.html" target = "iframe">
+								<!--<span class="glyphicon glyphicon-home"/>--><span>דף הבית</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav" id = "menu" name = "menu">
+					</ul>
+					<div class="navbar-form navbar-left" role="search">
+						<div class="form-group form-vertical">
+							<!-- <select class="form-control" style = "text-align: right; border-radius: 0; width: 35%;">	
+								<option value = "Author">מחבר</option>	
+								<option value = "Rec">מתכון</option>	
+								<option value = "Type">סוג מתכון</option>	
+							</select> -->
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder = "חיפוש"
+								id = "search_text" name = "search_text" style = "border-radius: 0; text-align: right; margin-left: -4px;">
+								<div class="input-group-btn">
+									<button class="btn btn-default" data-toggle="tooltip" title = "שלח" style = "margin-left: -4px; margin-right: -14px;" 
+									onclick = "Search(search_text.value);">
+										<i class="glyphicon glyphicon-search"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a data-toggle="tooltip" title = "אודות" id = "About" name = "About" href="about.html" target = "iframe">
+								<!--<span class="glyphicon glyphicon-home"/>--><span>אודות</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			
 			</div>
-
-			<table class="navbar-right" style="margin-right: 105px;">
-				<tr><th colspan = "4"/><th>:מצרכים</th></tr>
-				<tr><td colspan = "2"/><td>בצל קצוץ דק</td><td width = "45em">1</td><td /></tr>
-				<tr><td colspan = "2"/><td>פלפל חריף קצוץ דק לפי הטעם</td><td colspan = "2"/></tr>
-				<tr><td colspan = "2"/><td>רבע גמבה קצוצה לחתיכות קטנות</td><td colspan = "2"/></tr>
-				<tr><td colspan = "2"/><td>עגבניות קצוצות דק</td><td>2 - 3</td><td /></tr>
-				<tr><td colspan = "2"/><td>שיני שום כתושות או קצוצות</td><td>2 - 5</td><td /></tr>
-				<tr><td colspan = "2"/><td>ביצים</td><td>3 - 4</td><td /></tr>
-				<tr><td colspan = "2"/><td>כף רסק עגבניות</td><td colspan = "2"/></tr>
-				<tr><td colspan = "2"/><td>מעט מים בשביל הרוטב</td><td colspan = "2"/></tr>
-				<tr><td colspan = "2"/><td>תבלינים: מלח, פפריקה, פלפל שחור, מעט סוכר לפי הטעם</td><td colspan = "2"/></tr>
-
-				<tr><td colspan = "2"/><td><BR/></td><td colspan = "2"/></tr>
-					
-				<tr><th colspan = "4"/><th>:אופן ההכנה</th></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >מטגנים את הבצל והפלפלים על במחבט בגודל בינוני על אש בינונית-נמוכה</td><td colspan = "2"> .1</td></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >אחרי כ5-10 דקות מוסיפים את הגמבות</td><td colspan = "2"> .2</td></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >אחרי כ5-10 דקות מוסיפים את השום</td><td colspan = "2"> .3</td></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >אחרי כ5 דקות של טיגון מוסיפים את העגבניות והתבלינים</td><td colspan = "2"> .4</td></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >אחרי כ5-10 דקות, מוסיפים את רסק העגבניות, מעט מים ומכסים את המחבת. מבשלים עוד כ5-7 דקות לריכוך מלא של העגבניות</td><td colspan = "2"> .5</td></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >יוצרים גומות, שוברים בזעירות את הביצים ומכסים</td><td colspan = "2"> .6</td></tr>
-				<tr><td colspan = "2"/><td class = "Rec" >לקבלת ביצים רכות מבשלים כ5 דקות, ולקבלת ביצים קשות מבשלים כ10 דקות</td><td colspan = "2"></td></tr>
-
-				<tr><td colspan = "2"/><td><BR/></td><td colspan = "2"/></tr>
-				<tr><th colspan = "2"></th><td>אם הרוטב בעל חמיצות של עגבניות, ניתן לשים מעט סוכר</td><th /><th>:הערות</th></tr>
-			</table>
-		</div>
+		</nav>
 		
-		<div id = "footer" name = "footer" data-role = "footer">
-			<script>
-			var fileName = location.href.split("/").pop();
-			var html = getHTML("footer.html").replace(new RegExp("index.html", 'g'), fileName);
-			footer.innerHTML = html;
-			//footer.replaceWith (footer.firstChild.nextSibling);
-			</script>
-		</div>
-
+		<iframe class="navbar-static-top navbar-static-bottom" id = "iframe" name = "iframe" src = "" frameborder="0"> 
+		</iframe>
+		
+		<footer class = "text container-fluid navbar-fixed-bottom text-center" id = "foot" name = "foot">
+			<div class = "text-left navbar-left social" style="position: absolute;">
+				
+				<div id = "tweetBtn"><a class="twitter-share-button"
+					href="https://twitter.com/intent/tweet" data-size="large">
+				Tweet</a></div>
+				<div class="fb-like" 
+					data-href="https://RomanBr60.github.io/index.html"
+					data-layout="button_count"
+					data-action="like" data-size="large"
+					data-show-faces="true"
+					data-share="true">
+				</div>
+				<span class="g-plus" data-action="share" data-annotation="bubble" data-height="24" data-href="https://romanbr60.github.io/index.html"></span>
+				<span class="g-plusone" data-size="tall" data-callback="https://romanbr60.github.io/index.html"></span>
+			</div>
+			<span class = "text-center" style="position: relative;">!בתאבון</span>
+		</footer>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		
 		<script type = "text/javascript" src = "JS/jquery-ui.js"></script>
+		<script type = "text/javascript" src = "JS/jquery.mobile-1.4.5.js"></script>
 		<script type = "text/javascript" src = "JS/bootstrap-dialog.js"></script>
+		<script type = "text/javascript" src = "JS/docs.js"></script>
+
 		
 		<script>
-			var body = document.getElementsByTagName("body")[0];
+			window.___gcfg = {lang: 'iw'};
+			load_programme();
+			var iframe = document.getElementsByTagName("iframe")[0];
 			var Bottom = document.getElementsByTagName("footer")[0];
 			var Top = document.getElementsByTagName("nav")[0];
-			bodyDiv.style.paddingTop = (Top.offsetHeight - 1) + "px";
-			bodyDiv.style.paddingBottom = (Bottom.offsetHeight - 1) + "px";
+			iframe.style.paddingTop = (Top.offsetHeight - 1) + "px";
+			iframe.style.paddingBottom = (Bottom.offsetHeight - 1) + "px";
 			
-			$('.typeahead').typeahead();
-		</script>
+			/*var fb = document.getElementsByClassName("fb-like")[0];
+			
+			var e1 = document.getElementsByClassName("twitter-share-button")[0];
+			var e2 = document.getElementsByClassName("g-plus")[0];
+			var e3 = document.getElementsByClassName("g-plusone")[0];
+			
+			e1.style = "top: 50%; margin-top: -50px;";
+			e2.style.paddingTop = ((foot.offsetHeight - e2.offsetHeight) / 2) + "px";
+			e3.style.paddingTop = ((foot.offsetHeight - e3.offsetHeight) / 2) + "px";
 
-		</div>
+			 
+			/*e1.style.paddingTop = ((foot.offsetHeight - e1.offsetHeight) / 2) + "px";
+			e2.style.paddingTop = ((foot.offsetHeight - e2.offsetHeight) / 2) + "px";
+			e3.style.paddingTop = ((foot.offsetHeight - e3.offsetHeight) / 2) + "px";*/
+		
+			/*$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip({placement : 'bottom'});
+			});*/
+		</script>
+		
 	</body>
 </html>

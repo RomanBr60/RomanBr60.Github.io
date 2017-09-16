@@ -139,10 +139,10 @@ td, #rec_num { font-size: 1.15em; }
     border-color: silver;
 }
 
-/* CSS Frame work*/
+/* -------------------------------------------------------------CSS Frame work------------------------------------------------------------ */
 .navbar-center {
-	float: none;
-	margin: 0 auto;
-	margin-left: auto;
-	margin-right: auto;
+  margin-right: auto !important;
+  margin-left: auto !important;
 }
+
+
