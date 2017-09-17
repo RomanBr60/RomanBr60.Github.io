@@ -141,8 +141,8 @@ td, #rec_num { font-size: 1.15em; }
 
 /* -------------------------------------------------------------CSS Frame work------------------------------------------------------------ */
 .navbar-center {
-  margin-right: auto !important;
-  margin-left: auto !important;
+  float: none !important;
+  margin: auto !important;
 }
 
 
