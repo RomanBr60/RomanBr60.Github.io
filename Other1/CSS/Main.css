@@ -30,7 +30,7 @@ footer span {
 	color: silver;
 }
 
-.social {
+#social < ul < li < * {
   vertical-align: middle !important;
   margin-top: auto !important;
   margin-bottom: auto !important;
