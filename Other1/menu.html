@@ -76,6 +76,14 @@
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		
+		<script type = "text/javascript" src = "JS/jquery-ui.js"></script>
+		<script type = "text/javascript" src = "JS/bootstrap-dialog.js"></script>
+
+		
 		<div data-role = "page" id = "pageone">
 		
 		<div id = "nav" name = "nav" data-role = "header">
@@ -94,17 +102,18 @@
 			  <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> inbox</a>
 			  <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> sent</a>
 			  <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-left"></span> garbage</a>-->
-			<div class = "list-group-item active text-center" class="list-group-item" name = "rec_num" id = "rec_num">
-				<script>
-				var xmlDoc = xml();
-				rec_num.innerHTML = " נמצאו " + cnt() + " מתכונים ";
-				</script>
-			</div>
+				<div class = "list-group-item active text-center" name = "rec_num" id = "rec_num">
+					<script>
+					var xmlDoc = xml();
+					rec_num.innerHTML = " נמצאו " + cnt() + " מתכונים ";
+					</script>
+				</div>
 			
 				<script>
 				load_menu1();
 				</script>
 			</div>
+			<span class="ui-icon ui-icon-arrowthick-1-n">1234565</span>
 		</div>
 		
 		<div id = "footer" name = "footer" data-role = "footer">
@@ -112,22 +121,18 @@
 			var fileName = location.href.split("/").pop();
 			var html = getHTML("footer.html").replace(new RegExp("index.html", 'g'), fileName);
 			footer.innerHTML = html;
+			
+			setBodyParams();
 			</script>
 		</div>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		
-		<script type = "text/javascript" src = "JS/jquery-ui.js"></script>
-		<script type = "text/javascript" src = "JS/bootstrap-dialog.js"></script>
-		
+
 		<script>
-		var body = document.getElementsByTagName("body")[0];
-		var Bottom = document.getElementsByTagName("footer")[0];
-		var Top = document.getElementsByTagName("nav")[0];
-		bodyDiv.style.paddingTop = (Top.offsetHeight - 1) + "px";
-		bodyDiv.style.paddingBottom = (Bottom.offsetHeight - 1) + "px";
+		/*$( "#search_text" ).autocomplete({
+			source: recs_name(),
+			position: { my: "left top", at: "left bottom", collision: "none" },
+			classes: { "ui-autocomplete": "highlight" }
+		});*/
 		</script>
 		</div>
 	</body>

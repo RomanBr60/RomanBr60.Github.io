@@ -39,8 +39,9 @@
 					a.setAttribute("class","list-group-item small href");
 					a.setAttribute("title", Name2);
 					
-					var span = document.createElement("span");
-					span.setAttribute("class","glyphicon glyphicon-chevron-left");
+					var span = document.createElement("i");
+					span.setAttribute("class","fa fa-chevron-left");
+					span.setAttribute("aria-hidden","true");
 					span.setAttribute("style","margin-right: 3em;");
 					
 					
@@ -106,8 +107,9 @@
 							a.setAttribute("class","list-group-item small href");
 							a.setAttribute("title", Name2);
 							
-							var span = document.createElement("span");
-							span.setAttribute("class","glyphicon glyphicon-chevron-left");
+							var span = document.createElement("i");
+							span.setAttribute("class","fa fa-chevron-left");
+							span.setAttribute("aria-hidden","true");
 							span.setAttribute("style","margin-right: 3em;");
 							
 							
@@ -174,8 +176,9 @@
 								a.setAttribute("class","list-group-item small href");
 								a.setAttribute("title", Name2);
 								
-								var span = document.createElement("span");
-								span.setAttribute("class","glyphicon glyphicon-chevron-left");
+								var span = document.createElement("i");
+								span.setAttribute("class","fa fa-chevron-left");
+								span.setAttribute("aria-hidden","true");
 								span.setAttribute("style","margin-right: 3em;");
 								
 								

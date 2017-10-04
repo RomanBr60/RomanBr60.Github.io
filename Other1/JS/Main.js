@@ -12,6 +12,7 @@
 		}
 		catch (e) { alert(e); }
 		xmlDoc = xml();
+		//alert (recs_name());
 	}
 	
 		window.twttr = (function(d, s, id) {
@@ -151,10 +152,21 @@
 	}
 
 	var cnt = function() {
-		var Rec = xmlDoc.querySelectorAll('Rec[tag*=","]');
+		var Rec = xmlDoc.querySelectorAll('Rec[tag*=","], Rec[author]');
 		return (Rec.length);
 	}
 
+	var recs_name = function() {
+		var Rec = xmlDoc.querySelectorAll('Rec[tag], Rec[author]');
+		var recs_names = [];
+		for (i = 0; i < Rec.length; i++) {
+			recs_names.push(Rec[i].textContent);
+		}
+		
+		return recs_names;
+	}
+	
+	
 	function getParamValue(paramName) {
 		var url = window.location.search.substring(1); //get rid of "?" in querystring
 		var qArray = url.split('&'); //get key-value pairs
@@ -180,3 +192,15 @@
 			}
 		};
 	}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+function setBodyParams () {
+	var body = document.getElementsByTagName("body")[0];
+	var Bottom = document.getElementsByTagName("footer")[0];
+	var Top = document.getElementsByTagName("nav")[0];
+
+	bodyDiv.style.marginTop = Top.offsetHeight + "px";
+	//bodyDiv.style.marginBottom = (Bottom.offsetTop) + "px";
+	//bodyDiv.style.height = Math.abs(Bottom.offsetTop - Top.offsetHeight) + "px";
+
+}

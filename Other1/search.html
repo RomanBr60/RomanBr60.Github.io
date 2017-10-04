@@ -116,7 +116,11 @@
 			var html = getHTML("footer.html").replace(new RegExp("index.html", 'g'), fileName);
 			footer.innerHTML = html;
 			//footer.replaceWith (footer.firstChild.nextSibling);
+			
+			setBodyParams();
 			</script>
+			
+			
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -126,13 +130,6 @@
 		<script type = "text/javascript" src = "JS/jquery-ui.js"></script>
 		<script type = "text/javascript" src = "JS/bootstrap-dialog.js"></script>
 		
-		<script>
-		var body = document.getElementsByTagName("body")[0];
-		var Bottom = document.getElementsByTagName("footer")[0];
-		var Top = document.getElementsByTagName("nav")[0];
-		bodyDiv.style.paddingTop = (Top.offsetHeight - 1) + "px";
-		bodyDiv.style.paddingBottom = (Bottom.offsetHeight - 1) + "px";
-		</script>
 		</div>
 	</body>
 </html>
