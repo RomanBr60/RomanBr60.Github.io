@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="mobile-web-app-capable" content="yes">
-		<link rel="manifest" href="whatsapp.json">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
@@ -11,35 +10,28 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script>
-		openWA = ()=>{
+		useWhatsapp = function () {
 			num = $("#number").val();
-			if(num.startsWith(0)) num=num.slice(1);
+			if (num.startsWith(0)) num = num.slice(1);
 			num = $("#pre").val() + num;
 			window.location.href = `https://web.whatsapp.com/send?phone=${num}&text=` + $("#txt").val();
 			return false;
 		}
-		$(document).ready(()=>{
-			$("#number").focus();
-			$('#submit').on("focus", function (event) {
-				openWA();
-			});
-		});
+
 		</script>
 		<style>
 		body{
 			text-align: center;
 			font-family: sans-serif;
 		}
-		#number, #pre{
+		
+		#number, #aCode, #txt {
 			direction: rtl; 
 			text-align: center; 
-			font-size: 30px;
+			font-size: 20px;
 		}
-		button{
-			width: 200px;
-			height: 70px;
-		}
-		button{
+
+		button {
 			width: 200px;
 			height: 70px;
 		}
@@ -50,12 +42,12 @@
 		<h2>שליחת הודעת Whatsapp אל:</h2>
 		<br />
 		<div style="margin 0; float: none;">
-				<input type="tel" id="pre" size="3" value="972"/>
 				<input type="text" id="number" placeholder="הקלד מספר..."/>
+				<input type="tel" id="aCode" size="3" value="972"/>
 				<br/><br/>
 				<textarea id = "txt" cols = "68" rows = "7"></textarea>
 				<br/><br/>
-				<a type="button" class="btn btn-primary" onclick="openWA()" id="submit" role = "button" style="width: 10%;">
+				<a type="button" class="btn btn-primary" onclick="useWhatsapp()" role = "button" style="width: 10%;">
 				פתח הודעת Whatsapp</a>
 		</div>
 	</body>
