@@ -1,54 +1,59 @@
-<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
-<html dir="rtl">
+<!DOCTYPE html>
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Whatsapp</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script>
 		useWhatsapp = function () {
+			if (navigator.userAgent.match(/Windows|Linux/i)) url = "web";
+			else url = "api"
+			return;
 			num = $("#number").val();
 			if (num.startsWith(0)) num = num.slice(1);
-			num = $("#pre").val() + num;
-			window.location.href = `https://web.whatsapp.com/send?phone=${num}&text=` + $("#txt").val();
-			return false;
+			num = $("aCode").val() + num;
+			window.location.href = `https://${url}.whatsapp.com/send?phone=${num}&text=` + $("#txt").val();
 		}
-
 		</script>
 		<style>
-		body{
-			text-align: center;
-			font-family: sans-serif;
-		}
+			body{
+				text-align: center;
+				font-family: sans-serif;
+				background-color: #eee;
+			}
 		
-		#number, #aCode, #txt {
-			direction: rtl; 
-			text-align: center; 
-			font-size: 20px;
-		}
+			#number, #aCode, #txt {
+				font-size: 20px;
+				width: auto;
+			}
 
-		button {
-			width: 200px;
-			height: 70px;
-		}
+			#number, #aCode, #txt, h2, a.btn {
+				direction: rtl; 
+			}
+			
+			#txt {
+			    box-sizing:border-box;
+			}
+			a { width: 250px; }
 		</style>
 	</head>
 	<body>
-		<img src="whatsapp.png"/>
-		<h2>שליחת הודעת Whatsapp אל:</h2>
-		<br />
-		<div style="margin 0; float: none;">
-				<input type="text" id="number" placeholder="הקלד מספר..."/>
-				<input type="tel" id="aCode" size="3" value="972"/>
-				<br/><br/>
-				<textarea id = "txt" cols = "68" rows = "7"></textarea>
-				<br/><br/>
-				<a type="button" class="btn btn-primary" onclick="useWhatsapp()" role = "button" style="width: 10%;">
-				פתח הודעת Whatsapp</a>
+		<div style = "  display: inline;">
+			<h2 style = "vertical-align: middle;">שליחת הודעת Whatsapp אל:</h2>
+			<br />
+			<div>
+				<input type="text" id="aCode" maxlength = "5" value="972" placeholder="קידומת מדינה"/>
+				<input type="text" id="number" placeholder="הקלד מספר..." maxlength = "10" />
+			</div>
+			<h2>תוכן ההודעה לפני שליחה:</h2>
+			<textarea id="txt"></textarea>
+			<br/><br/>
+			<a type="button" class="btn btn-primary" onclick="useWhatsapp()" role = "button">פתח הודעת Whatsapp</a>
 		</div>
 	</body>
 </html> 
