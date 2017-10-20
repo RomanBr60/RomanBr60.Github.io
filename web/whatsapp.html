@@ -16,7 +16,8 @@
 			num = $("#number").val();
 			if (num.startsWith(0)) num = num.slice(1);
 			num = $("aCode").val() + num;
-			window.location.href = 'https://${url}.whatsapp.com/send?phone=${num}&text=' + $("#txt").val();
+			txt = $("#txt").val();
+			window.location.href = `https://${url}.whatsapp.com/send?phone=${num}&text=${txt}`;
 		}
 		</script>
 		<style>
