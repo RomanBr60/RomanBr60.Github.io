@@ -13,7 +13,6 @@
 		useWhatsapp = function () {
 			if (navigator.userAgent.match(/Windows|Linux/i)) url = "web";
 			else url = "api"
-			return;
 			num = $("#number").val();
 			if (num.startsWith(0)) num = num.slice(1);
 			num = $("aCode").val() + num;
