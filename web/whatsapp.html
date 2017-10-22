@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="mobile-web-app-capable" content="yes">
@@ -11,11 +11,12 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script>
 		useWhatsapp = function () {
+			let uel;
 			if (navigator.userAgent.match(/Windows|Linux/i)) url = "web";
 			else url = "api"
 			num = $("#number").val();
 			if (num.startsWith(0)) num = num.slice(1);
-			num = $("aCode").val() + num;
+			num = $("#aCode").val() + num;
 			txt = $("#txt").val();
 			window.location.href = `https://${url}.whatsapp.com/send?phone=${num}&text=${txt}`;
 		}
