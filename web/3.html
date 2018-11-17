@@ -4,9 +4,9 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	</head>
     <body>
-        <input type = "number" id = "a1" />
-        <input type = "number" id = "a2" />
-        <input type = "number" id = "a3" />
+        x: <input type = "number" id = "a1" />
+        y: <input type = "number" id = "a2" />
+        z: <input type = "number" id = "a3" />
         <input type = "button" value = "calculate"  onclick = "makeCalc()"/>
 		<p id = "res"></p>
 		<script>
@@ -31,6 +31,7 @@
 					z >>= 2;
 					res.innerHTML += "<br/>x = " + x + " y = " + y + " z = " + z;
 					if ((x%3==0) || (y%3==0) || (z%3==0)) res.innerHTML += "<br/>Yes";
+					else res.innerHTML += "<br/>No";
 				}
 			}
 		</script>
