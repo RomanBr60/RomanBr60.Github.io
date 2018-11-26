@@ -6,26 +6,37 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Whatsapp</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-		<script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script>
-		useWhatsapp = function () {
-			let url;
-			if (navigator.userAgent.match(/Windows|Linux/i)) url = "web";
-			else url = "api"
-			num = $("#number").val();
-			if (num.startsWith(0)) num = num.slice(1);
-			num = $("#aCode").val() + num;
-			txt = $("#txt").val();
-			window.location.href = `https://${url}.whatsapp.com/send?phone=${num}&text=${txt}`;
+		function detectmob() { 
+			return ( navigator.userAgent.match(/Android/i)
+				|| navigator.userAgent.match(/webOS/i)
+				|| navigator.userAgent.match(/iPhone/i)
+				|| navigator.userAgent.match(/iPad/i)
+				|| navigator.userAgent.match(/iPod/i)
+				|| navigator.userAgent.match(/BlackBerry/i)
+				|| navigator.userAgent.match(/Windows Phone/i)
+			) ? true : false;
 		}
+		useWhatsapp = function () {
+			
+			var num = parseInt($("#number").val()) + '';
+			num = $("#aCode").val() + num;
+			var txt = $("#txt").val();
+			
+			var url = detectmob() ? 'api' : 'web';
+			url = `https://${url}.whatsapp.com/send?phone=${num}&text=${txt}`;
+			window.location.href = url;
+		}
+		
 		useTel = function () {
 			num = $("#number").val();
 			if (num.startsWith(0)) num = num.slice(1);
 			num = $("#aCode").val() + num;
 			window.location.href = `tel:${num}`;
 		}
+		
 		</script>
 		<style>
 			body{
