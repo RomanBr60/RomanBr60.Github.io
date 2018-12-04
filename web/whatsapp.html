@@ -21,8 +21,8 @@
 		}
 		useWhatsapp = function () {
 			
-			var num = parseInt($("#number").val()) + '';
-			num = $("#aCode").val() + num;
+			var num = parseInt($("#number").val().replace(/\D/g,'')) + '';
+			num = $("#country_code").val().replace(/\D/g,'') + num;
 			var txt = $("#txt").val();
 			
 			var url = detectmob() ? 'api' : 'web';
@@ -31,9 +31,8 @@
 		}
 		
 		useTel = function () {
-			num = $("#number").val();
-			if (num.startsWith(0)) num = num.slice(1);
-			num = $("#aCode").val() + num;
+			var num = parseInt($("#number").val().replace(/\D/g,'')) + '';
+			num = $("#country_code").val().replace(/\D/g,'') + num;
 			window.location.href = `tel:${num}`;
 		}
 		
@@ -45,19 +44,23 @@
 				background-color: #eee;
 			}
 		
-			#number, #aCode, #txt {
+			#number, #country_code, #txt {
 				font-size: 20px;
 				width: auto;
 			}
 
-			#number, #aCode, #txt, h2, a.btn {
-				direction: rtl; 
+			#txt, h2, a.btn { direction: rtl; }
+			#number, #country_code { 
+				direction: ltl;  
 			}
 			
+			#country_code { width: 115px; }
 			#txt {
 			    box-sizing:border-box;
+				width: 400px;
+				height: 200px;
 			}
-			a { width: 250px; }
+			a[type='button'] { width: 200px; }
 		</style>
 	</head>
 	<body>
@@ -65,14 +68,13 @@
 			<h2 style = "vertical-align: middle;">שליחת הודעת Whatsapp אל:</h2>
 			<br />
 			<div>
-				<input type="text" id="aCode" maxlength = "5" value="972" placeholder="קידומת מדינה"/>
-				<input type="text" id="number" placeholder="הקלד מספר..." maxlength = "10" />
+				<input type="text" id="country_code" maxlength = "5" value="972" placeholder="קידומת מדינה"/>
+				<input type="text" id="number" placeholder="הקלד מספר" maxlength = "10" />
 			</div>
 			<h2>תוכן ההודעה לפני שליחה:</h2>
 			<textarea id="txt"></textarea>
 			<br/><br/>
 			<a type="button" class="btn btn-primary" onclick="useWhatsapp()" role = "button">פתח הודעת Whatsapp</a>
-			<br/>
 			<a type="button" class="btn btn-primary" onclick="useTel()" role = "button">להתקשר למספר</a>
 		</div>
 	</body>
