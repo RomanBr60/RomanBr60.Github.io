@@ -1,0 +1,64 @@
+<!DOCTYPE>
+<html lang="he">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="UTF-8">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width">
+		<meta name="generator" content="slidify" />
+		<meta name="google" content="notranslate">
+		<meta name="robots" content="follow, index" />
+		<link rel="canonical" href="RomanBr60.github.io/web/whatsapp.html" />
+		
+		<meta name="description" content="שליחת הודעת ווטסאפ למספר טלפון" />
+		<meta name="author" content="רומן ברברמן" />
+
+		<meta name="og:description" content="שליחת הודעת ווטסאפ למספר טלפון"/>
+		<meta name="og:url" content="RomanBr60.github.io/web/whatsapp.html"/>
+		<meta name="og:title" content="ווטסאפ"/>
+		<meta name="og:image" content="https://www.whatsapp.com/img/whatsapp-promo.png"/>		
+		
+		<link rel="shortcut icon" href="https://web.whatsapp.com/img/favicon/1x/favicon.png" type="image/png" />
+		<link rel="apple-touch-icon" sizes="194x194" href="https://web.whatsapp.com/apple-touch-icon.png" type="image/png" />
+
+		
+		<title>וואטסאפ</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		
+		<script>		
+		function detect_platform() { 
+			return ( navigator.userAgent.match(/Android/i)
+				|| navigator.userAgent.match(/webOS/i)
+				|| navigator.userAgent.match(/iPhone/i)
+				|| navigator.userAgent.match(/iPad/i)
+				|| navigator.userAgent.match(/iPod/i)
+				|| navigator.userAgent.match(/BlackBerry/i)
+				|| navigator.userAgent.match(/Windows Phone/i)
+			) ? true : false;
+		}
+		
+		function redirect () {
+			var url = new URL(window.location);
+			var phone = url.searchParams.get("phone");
+			phone = phone.replace(/\D/g,'');
+			if (phone == '') {
+				alert ("Please enter valid phone number");
+				if(history.length > 1) {
+					history.back();
+					return
+				}
+			}
+			
+			var txt = url.searchParams.get("text");
+			if (txt == null) txt = '';
+			var url = detect_platform() ? 'api' : 'web';
+			url = `https://${url}.whatsapp.com/send?phone=${phone}&text=${txt}`;
+			window.location.href = url;
+		
+		}
+		
+		redirect();
+		</script>
+	</body>
+</html> 
