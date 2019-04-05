@@ -10,6 +10,7 @@
 		<meta name="google" content="notranslate">
 		<meta name="robots" content="follow, index" />
 		<link rel="canonical" href="RomanBr60.github.io/web/whatsapp.html" />
+
 		
 		<meta name="description" content="שליחת הודעת ווטסאפ למספר טלפון" />
 		<meta name="author" content="רומן ברברמן" />
@@ -18,6 +19,12 @@
 		<meta name="og:url" content="RomanBr60.github.io/web/whatsapp.html"/>
 		<meta name="og:title" content="ווטסאפ"/>
 		<meta name="og:image" content="https://www.whatsapp.com/img/whatsapp-promo.png"/>		
+
+		<meta property="og:site_name" content="משתמש ווטסאפ" />
+		<meta property="article:publisher" content="https://www.facebook.com/RonenBr60/" />
+		<meta property="article:author" content="https://www.facebook.com/RonenBr60/" />
+		<meta property="article:tag" content="ווטסאפ" />
+		<meta property="article:tag" content="סמארטפון" />
 		
 		<link rel="shortcut icon" href="https://web.whatsapp.com/img/favicon/1x/favicon.png" type="image/png" />
 		<link rel="apple-touch-icon" sizes="194x194" href="https://web.whatsapp.com/apple-touch-icon.png" type="image/png" />
@@ -46,19 +53,7 @@
 			) ? true : false;
 		}
 		
-		function getNum() {
-			//alert ($("#number").val().trim());
-			/*if ( ($("#number").val().trim()  == '') || ($("#country_code").val().trim()  == '') )
-			{
-				if ($("#number").val() == '')
-					$("#numberX").attr('class', 'glyphicon glyphicon-remove form-control-feedback text-danger'); 
-				
-				if ($("#country_code").val() == '')
-					$("#countryX").attr('class', 'glyphicon glyphicon-remove form-control-feedback text-danger'); 
-				
-				return '';
-			}*/
-			
+		function getNum() {			
 			var num = parseInt($("#number").val().replace(/\D/g,'')) + '';
 			num = $("#country_code").val().replace(/\D/g,'') + num;
 			return num;
