@@ -33,162 +33,12 @@
 		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,100' rel='stylesheet' type='text/css'>
 		<!--<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100" rel="stylesheet" type="text/css">-->
 
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script>
-		/*var str = "file:///C:/ProgFiles/Roman/XML/GitHub/Whatsapp/whatsapp.html";
-		var decode = btoa(str);
-		alert (decode + `\n` + atob(decode));*/
-		
-		function detect_platform() { 
-			return ( navigator.userAgent.match(/Android/i)
-				|| navigator.userAgent.match(/webOS/i)
-				|| navigator.userAgent.match(/iPhone/i)
-				|| navigator.userAgent.match(/iPad/i)
-				|| navigator.userAgent.match(/iPod/i)
-				|| navigator.userAgent.match(/BlackBerry/i)
-				|| navigator.userAgent.match(/Windows Phone/i)
-			) ? true : false;
-		}
-		
-		function getNum() {			
-			var num = parseInt($("#number").val().replace(/\D/g,'')) + '';
-			num = $("#country_code").val().replace(/\D/g,'') + num;
-			return num;
-		}
-		
-		useWhatsapp = function () {
-			var num = getNum();
-			if (num == '') return;
-			var txt = $("#txt").val();
-			
-			var url = detect_platform() ? 'api' : 'web';
-			url = `https://${url}.whatsapp.com/send?phone=${num}&text=${txt}`;
-			window.location.href = url;
-		}
-		
-		useTel = function (func) {
-			var num = getNum();
-			if (num == '') return;
-
-			var userName = $("#userName").val();
-			var url;
-			switch (func) {
-				case "tel":  
-					if (getNum == '') return;
-					url = `tel:${num}`; break;
-					
-				case "skype1": 
-					if (getNum == '') return;
-					url = `skype:${num}?call`; break; 
-					
-				//case "skype1": url = "callto://" + `${num}`; break; 
-				case "skype2": url = `skype:${userName}?call`; break; 
-				case "skype3": url = `skype:${userName}?chat`; break; 
-				//case "skype3": url = `skype:${userName}`; break; 
-			}
-			
-			window.location.href = url;
-		}
-		</script>
-		<style>
-		@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			-webkit-font-smoothing: antialiased;
-			-moz-font-smoothing: antialiased;
-			-o-font-smoothing: antialiased;
-			font-smoothing: antialiased;
-			text-rendering: optimizeLegibility;
-			text-align: center; 
-			max-width: 100%;
-			width: 100%;
-		}
-		
-		body{
-			box-sizing: border-box;
-			background-color: #4CAF50;
-
-			font-family: "Roboto", Helvetica, Arial, sans-serif;
-			font-weight: 100;
-			color: #777;
-		}
-
-		.panel { 
-			/*box-shadow: 5px 10px 15px #666666;*/
-			/*box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);			*/
-			box-shadow: 0 0 30px black;
-			background-color: #F9F9F9;
-			
-			top: 50%;
-			margin-top: 25%;
-		}
-
-		.heading { 
-			text-shadow: -1px -1px 0 black;
-			color: silver;
-			letter-spacing: 1px;
-			font-weight: bold;
-			text-align: right;
-		}
-
-		#country_code, #number, #txt, #userName {
-			padding: 0 4px 0 4px;
-			text-align: left;
-			color: black;
-			border: 0.15em groove #aaa;
-		}
-
-		#number, #country_code, #userName { direction: ltl; }
-
-		#txt {
-			height: 150px;
-			padding: 5px;
-			text-align: right;
-			direction: rtl;
-		}
-		
-		.heading, div { 
-			margin-bottom: 0px; 
-			padding-bottom: 3px;
-		}
-		
-		.btn { text-align: center; width: 49%; }
-		
-		#country_code { width: 34%; margin-right: 1%;}
-		#number { width: 64%; margin-left: 1%; }
-		#userName { width: 100%;}
-
-		.panel-heading {
-			background-color: #ff0000; 
-			color: #fff; 
-		}
-
-		#heading-title > #title {
-			text-shadow: 1px 1px .5px black;
-			font-size: 23px;
-			margin: 0;
-			padding: 0;
-		}
-
-		/*#heading-title > #subtitle {
-			font-weight: 400 bold;
-			margin: 0;
-			padding: 0;
-		)*/
-		
-		.alert { direction: ltl; }
-		
-		textarea {
-			resize: none;
-		}
-		</style>
-	
+        <script type="text/javascript" src="js/index.js"></script>
+		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body>
 		<div id="fb-root"></div>
@@ -207,15 +57,10 @@
 					
 					<div class="panel-heading">
 						<div id="heading-title">
-							<h3 id = "title" style="">פתיחת איש קשר בווטסאפ/סקייפ</h3>
+							<h3 id = "title" style="">שליחת הודעה בווטסאפ</h3>
 						</div>
 					</div>
 					<div class="panel-body">
-						<!--<div class="alert alert-danger" role="alert">
-							<span class="sr-only">Error:</span>הכנס מספר טלפון תקין
-							<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="false"></span>
-						</div>-->
-
 						<div>
 							<h4 class="heading">מספר טלפון לשליחת ההודעה</h4>
 							<div class = "input-group has-success has-feedback">
@@ -236,15 +81,17 @@
 							<h4 class="heading">תוכן ההודעה לפני שליחה</h4>
 							<textarea id="txt" placeholder="הקלד הודעה"></textarea>
 						</div>
-						<div>
+					</div>
+					<div class="panel-footer">						
+						<div class = "has-success has-feedback">
 							<a type="button" class="btn btn-primary btn-sm" onclick="useWhatsapp()" role = "button">פתח הודעת ווטסאפ</a>
 							<a type="button" class="btn btn-primary btn-sm" onclick="useTel('tel')" role = "button">להתקשר למספר</a>
 						</div>
-						<div>
+						<div class = "has-success has-feedback">
 							<a type="button" class="btn btn-primary btn-sm" onclick="useTel('skype2');" role = "button">שיחת סקייפ</a>
 							<a type="button" class="btn btn-primary btn-sm" onclick="useTel('skype1');" role = "button">שיחת טלפון בסקייפ</a>
-						</div>
-						<div>
+						</div class = "has-success has-feedback">
+						<div class = "has-success has-feedback">
 							<a type="button" class="btn btn-primary btn-sm" onclick="useTel('skype3');" role = "button">התכתבות בסקייפ</a>
 						</div>
 					</div>
