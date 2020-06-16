@@ -39,17 +39,21 @@
  
 		<script>
 		var fileName = "job2.xml";
-		var xobj = new XMLHttpRequest();
-		xobj.overrideMimeType("application/xml");
-		xobj.open('GET', fileName, true); // Replace 'my_data' with the path to your file
-		xobj.onreadystatechange = function () {
-			  if (xobj.readyState == 4 && xobj.status == "200") {
-				// Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-				console.log(JSON.parse(xobj.responseText));
-			  }
-		};
-		xobj.send(null);  		
-
+		loadDoc();
+		function loadDoc() {
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			myFunction(this);
+			}
+		  };
+		  xhttp.open("GET", fileName, true);
+		  xhttp.send();
+		}
+		function myFunction(xml) {
+		  var xmlDoc = xml.responseXML;
+		  console.log (xmlDoc);
+		}
 		</script>
 	
 	</body>
