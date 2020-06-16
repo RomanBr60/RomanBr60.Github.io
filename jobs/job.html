@@ -37,15 +37,20 @@
 		<div id="images"></div>
  
 		<script>
-		var fileName = "job2.xml";
+		var fileName = "job2.json";
 		function loadDoc() {
-			var client = new XMLHttpRequest();
-			client.onload = function() {
-			// in case of network errors this might not give reliable results
-				console.log(this.responseXML);
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				myFunction(this);
 			}
-			client.open("HEAD", fileName);
-			client.send();
+		  };
+		  xhttp.open("GET", fileName, true);
+		  xhttp.send();
+		}
+		function myFunction(xml) {
+		  var xmlDoc = xml.responseXML;
+		  console.log (xmlDoc);
 		}
 		</script>
 	
