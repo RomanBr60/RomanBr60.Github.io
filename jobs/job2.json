@@ -1,12 +1,36 @@
 {
-   "job": [{
-      "name": "אתרים מטעם המדינה",
-      "links": [
-         {"site_name": "נציב שירות המדינה", "link": "https://www.gov.il/he/Departments/Topics/tenders_hr" }, 
-		 {"site_name": "אתר גיוס לנציב שירות המדינה", "link": "https://ejobs.gov.il/gius/"},
-		 {"site_name": "דף פייסבוק משרות בשירות המדינה", "link": "https://www.facebook.com/israel.civil.service/"},
-		 {"site_name": "לשכת התעסוקה", "link": "https://www.taasuka.gov.il/he/Applicants/"},
-		 {"site_name": "חברת חשמל", "link": "https://careers.iec.co.il/"}
-      ]
-   }]
+   "job": [
+      {
+         "name": "אתרים מטעם המדינה",
+         "links": [
+            {
+               "site_name": "נציב שירות המדינה",
+               "link": "https://www.gov.il/he/Departments/Topics/tenders_hr"
+            },
+            {
+               "site_name": "אתר גיוס לנציב שירות המדינה",
+               "link": "https://ejobs.gov.il/gius/"
+            },
+            {
+               "site_name": "דף פייסבוק משרות בשירות המדינה",
+               "link": "https://www.facebook.com/israel.civil.service/"
+            },
+            {
+               "site_name": "משרות בשירות המדינה - אתר אזרחי",
+               "link": "http://www.govjob.co.il/"
+            },
+            {
+               "site_name": "לשכת התעסוקה",
+               "link": "https://www.taasuka.gov.il/he/Applicants/"
+            },
+            {
+               "site_name": "חברת חשמל",
+               "link": "https://careers.iec.co.il/"
+            }
+         ]
+      },
+      {
+         "name": "אתרים שפועלים מטעם מועצות"
+      }
+   ]
 }
