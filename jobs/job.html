@@ -21,24 +21,30 @@
 		</style>
 	</head>
 	<body>
+
 		<script src="https://use.fontawesome.com/7f1d70ce9d.js" type="application/javascript"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="application/javascript"></script>
+		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" type="application/javascript"></script>
 				
 		<div class="container">
   			
-			<div class="form-group">
+			<div class="form-group" id="display">
 				<ol name="list" id="list">
 				</ol>
 			</div>
 
 		</div>
+
+		<div id="images"></div>
+ 
 		<script>
-		$.getJSON( "ajax/job2.json", function(data) {
-			/*$.each(data, function(data1) {
-			});*/
-			document.write (data);
-		});		 
+		alert('json');
+		(function() {
+		$.getJSON( "jobs2.json", function( json ) {
+		  alert(json);
+		});
+		
+		})();
 		</script>
 	
 	</body>
