@@ -29,8 +29,7 @@
 		<div class="container">
   			
 			<div class="form-group" id="display">
-				<ol name="list" id="list">
-				</ol>
+				  <button type="button" class="btn btn-default" onclick="loadDoc();">GET DATA</button>
 			</div>
 
 		</div>
@@ -39,7 +38,6 @@
  
 		<script>
 		var fileName = "job2.xml";
-		loadDoc();
 		function loadDoc() {
 		  var xhttp = new XMLHttpRequest();
 		  xhttp.onreadystatechange = function() {
