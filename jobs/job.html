@@ -35,9 +35,9 @@
 		</div>
 		<script>
 		$.getJSON( "ajax/job2.json", function(data) {
-			$.each(data.job[0], function(data1) {
-				list.append("<li>" + data1.name + "</li>" );
-			});
+			/*$.each(data, function(data1) {
+			});*/
+			document.write (data);
 		});		 
 		</script>
 	
