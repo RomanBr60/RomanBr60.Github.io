@@ -5,7 +5,8 @@
          "links": [
             {
                "site_name": "נציב שירות המדינה",
-               "link": "https://www.gov.il/he/Departments/Topics/tenders_hr"
+               "link": "https://www.gov.il/he/Departments/Topics/tenders_hr",
+			   "facebook_link": ""
             },
             {
                "site_name": "אתר גיוס לנציב שירות המדינה",
@@ -18,11 +19,13 @@
             },
             {
                "site_name": "לשכת התעסוקה",
-               "link": "https://www.taasuka.gov.il/he/Applicants/"
+               "link": "https://www.taasuka.gov.il/he/Applicants/",
+			   "facebook_link": ""
             },
             {
                "site_name": "חברת חשמל",
-               "link": "https://careers.iec.co.il/"
+               "link": "https://careers.iec.co.il/",
+			   "facebook_link": "https://www.facebook.com/ieccareer/"
             },
             {
                "site_name": "משטרה",
@@ -33,6 +36,21 @@
                "site_name": "קופת חולים כללית",
                "link": "https://jobs.clalitapps.co.il/Positions/"
                "facebook_link": "https://www.facebook.com/clalit.careers/"
+            },
+            {
+               "site_name": "קופת חולים לאומית",
+               "link": "https://www.leumit.co.il/heb/Useful/jobs/jobopennings/"
+               "facebook_link": ""
+            },
+            {
+               "site_name": "קופת חולים מאוחדת",
+               "link": "https://www.meuhedet.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/"
+               "facebook_link": ""
+            },
+            {
+               "site_name": "קופת חולים מכבי",
+               "link": "https://www.maccabi4u.co.il/10886-he/Maccabi.aspx/"
+               "facebook_link": ""
             }
          ]
       },
