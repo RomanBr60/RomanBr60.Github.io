@@ -30,34 +30,25 @@
   			
 			<div class="form-group" id="display">
 				  <button type="button" class="btn btn-default" onclick="loadDoc();">GET DATA</button>
-				  <p id="q" name="q"></p>
+				  <p id = 'q'></p>
 			</div>
 
 		</div>
-
-		<div id="images"></div>
  
 		<script>
-		var fileName = "job2.xml";
-		var i=0;
-		/*function loadDoc1() {
-		  //q.innerHTML = i++;
-		  var xhttp = new XMLHttpRequest();
-		  //xhttp.overrideMimeType("application/json");
-		  xhttp.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
-				q.innerHTML = this.responseXML;
-			}
-		  };
-		  xhttp.open("HEAD", fileName, false);
-		  xhttp.send();
-		}*/
-		
+		var fileName = "https://romanbr60.github.io/jobs/job2.json";
+		var jobs_data;
 		function loadDoc() {
-			xmlhttp = new XMLHttpRequest();
-			xmlhttp.open("GET", fileName, true);
-			xmlhttp.send();
-			q.innerHTML = xmlhttp.responseText;
+			fetch(fileName,{ credentials: 'same-origin' })
+			  .then(response => response.json())
+			  .then(data => {
+					jobs_data = data.job;
+					alert (jobs_data);
+					q.innerHTML = JSON.stringify(jobs_data); //data.job[0].name;
+			  })
+			  .catch((error) => {
+				   console.error('Error:', error);
+			  });
 		}		
 		</script>
 	

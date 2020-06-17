@@ -9,11 +9,8 @@
             },
             {
                "site_name": "אתר גיוס לנציב שירות המדינה",
-               "link": "https://ejobs.gov.il/gius/"
-            },
-            {
-               "site_name": "דף פייסבוק משרות בשירות המדינה",
-               "link": "https://www.facebook.com/israel.civil.service/"
+               "link": "https://ejobs.gov.il/gius/",
+			   "facebook_link": "https://www.facebook.com/israel.civil.service"
             },
             {
                "site_name": "משרות בשירות המדינה - אתר אזרחי",
@@ -26,11 +23,30 @@
             {
                "site_name": "חברת חשמל",
                "link": "https://careers.iec.co.il/"
+            },
+            {
+               "site_name": "משטרה",
+			   "link": "https://www.police.gov.il/join",
+               "facebook_link": "https://www.facebook.com/israel.giyus.police/"
+            },
+            {
+               "site_name": "קופת חולים כללית",
+               "link": "https://jobs.clalitapps.co.il/Positions/"
+               "facebook_link": "https://www.facebook.com/clalit.careers/"
             }
          ]
       },
       {
          "name": "אתרים שפועלים מטעם מועצות"
+      },
+      {
+         "name": "ארגונים/עמותות"
+      },
+      {
+         "name": "אתרים של חברות גדולות"
+      },
+      {
+         "name": "אחרים"
       }
    ]
 }
