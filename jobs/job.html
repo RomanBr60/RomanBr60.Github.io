@@ -11,18 +11,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>רשימת אתרים</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 		<style>
-			ol { 
+			ul, li { 
 				text-align: right;
 				direction: rtl;
 			}	
 			
+			li.a {
+				font-weight: bold;
+				font-size: 15px;
+				list-style-type: none;
+			}
+			
+			li.b {
+				list-style-type: none;
+				margin-right: 10px;
+			}
+				
 		</style>
 	</head>
 	<body>
 
-		<script src="https://use.fontawesome.com/7f1d70ce9d.js" type="application/javascript"></script>
 		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" type="application/javascript"></script>
 				
@@ -30,7 +39,8 @@
   			
 			<div class="form-group" id="display">
 				  <button type="button" class="btn btn-default" onclick="loadDoc();">GET DATA</button>
-				  <p id = 'q'></p>
+				  <p id='q'></p>
+				  <ul id = 'list' name=></ul>
 			</div>
 
 		</div>
@@ -38,18 +48,35 @@
 		<script>
 		var fileName = "https://romanbr60.github.io/jobs/job2.json";
 		var jobs_data;
+		loadDoc();
 		function loadDoc() {
 			fetch(fileName,{ credentials: 'same-origin' })
 			  .then(response => response.json())
 			  .then(data => {
 					jobs_data = data.job;
-					alert (jobs_data);
-					q.innerHTML = JSON.stringify(jobs_data); //data.job[0].name;
+					list.innerHTML = '';
+					for (var i = 0; i < data.job.length; i++) {
+						list.innerHTML += '<li class="a">' + (i+1) + '. ' + jobs_data[i].name+'</li>';
+						
+						//alert((typeof data.job[i].links) != undefined);
+						if (data.job[i].links === Object(data.job[i].links)) {
+							for (var j = 0; i < data.job[i].links.length; j++) {
+								list.innerHTML += '<li class="b">' + (j+1) + '. <a href="' + data.job[i].links[j].link + '>' + data.job[i].links[j].site_name+'</a></li>';
+								
+							}
+						}
+						
+					}
+					
+					//for (var i = 0; i < jobs_data.length; i++)
+					//li += "<li>" + jobs_data[i].name + "</li>";
+				
 			  })
 			  .catch((error) => {
 				   console.error('Error:', error);
 			  });
 		}		
+		
 		</script>
 	
 	</body>
