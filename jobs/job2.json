@@ -62,19 +62,53 @@
   },
   {
    "name": "אתרים שפועלים מטעם מועצות",
-   "links": []
+   "links": [
+    {
+     "site_name": "לוח דרושים באזור עמק הירדן",
+     "link": "http://www.j-v.co.il/luah.asp?cat=1&all=true/",
+     "facebook_link": ""
+    },
+    {
+     "site_name": "משרות באזור תעשייה תפן",
+     "link": "https://www.tefen.muni.il/index.php?dir=site&page=jobs&op=category&cs=6030/",
+     "facebook_link": ""
+    }
+   ]
   },
   {
    "name": "ארגונים/עמותות",
-   "links": []
+   "links": [
+    {
+     "site_name": "מעברים בעמק",
+     "link": "https://www.maavarim-baemek.org.il/cgi-webaxy/sal/sal.pl?lang=he&ID=283725_mv_emekizrael&dbid=mb_jobs&act=search2/",
+     "facebook_link": ""
+    },
+    {
+     "site_name": "אופנים (חינוך בפריפריה כיתות ג' - ו')",
+     "link": "https://ofanim.org.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/",
+     "facebook_link": ""
+    }
+   ]
   },
   {
    "name": "אתרים של חברות גדולות",
-   "links": []
+   "links": [
+    {
+     "site_name": "אלביט",
+     "link": "https://elbit.hunterhrms.com/index.php?lang=%D7%A2%D7%91/",
+     "facebook_link": "https://www.facebook.com/Elbitsystems/"
+    }
+   ]
   },
   {
    "name": "אחרים",
-   "links": []
+   "links": [
+    {
+     "site_name": "לוח עבודות בפייסבוק",
+     "link": "https://www.facebook.com/jobs/",
+     "facebook_link": "https://www.facebook.com/jobs/"
+    }
+   ]
   }
  ]
 }
