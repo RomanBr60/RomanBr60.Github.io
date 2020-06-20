@@ -107,6 +107,24 @@
 					"link": "https://elbit.hunterhrms.com/index.php?lang=%D7%A2%D7%91/",
 					"link2": "",
 					"facebook_link": "https://www.facebook.com/Elbitsystems/"
+				},
+				{
+					"site_name": "שטראוס",
+					"link": "https://www.strauss-group.co.il/career/jobs/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "רפאל",
+					"link": "https://career.rafael.co.il/search/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "בזק",
+					"link": "https://www.bezeq.co.il/career/",
+					"link2": "",
+					"facebook_link": ""
 				}
 			]
 		},
