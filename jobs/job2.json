@@ -1,7 +1,9 @@
 {
-	"job": [{
+	"job": [
+		{
 			"name": "אתרים מטעם המדינה",
-			"links": [{
+			"links": [
+				{
 					"site_name": "נציב שירות המדינה",
 					"link": "https://www.gov.il/he/Departments/Topics/tenders_hr",
 					"link2": "https://ejobs.gov.il/gius/",
@@ -65,7 +67,8 @@
 		},
 		{
 			"name": "אתרים שפועלים מטעם מועצות",
-			"links": [{
+			"links": [
+				{
 					"site_name": "לוח דרושים באזור עמק הירדן",
 					"link": "http://www.j-v.co.il/luah.asp?cat=1&all=true/",
 					"link2": "",
@@ -81,7 +84,8 @@
 		},
 		{
 			"name": "ארגונים/עמותות",
-			"links": [{
+			"links": [
+				{
 					"site_name": "מעברים בעמק",
 					"link": "https://www.maavarim-baemek.org.il/cgi-webaxy/sal/sal.pl?lang=he&ID=283725_mv_emekizrael&dbid=mb_jobs&act=search2/",
 					"link2": "",
@@ -97,21 +101,25 @@
 		},
 		{
 			"name": "אתרים של חברות גדולות",
-			"links": [{
-				"site_name": "אלביט",
-				"link": "https://elbit.hunterhrms.com/index.php?lang=%D7%A2%D7%91/",
-				"link2": "",
-				"facebook_link": "https://www.facebook.com/Elbitsystems/"
-			}]
+			"links": [
+				{
+					"site_name": "אלביט",
+					"link": "https://elbit.hunterhrms.com/index.php?lang=%D7%A2%D7%91/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/Elbitsystems/"
+				}
+			]
 		},
 		{
 			"name": "אחרים",
-			"links": [{
-				"site_name": "לוח עבודות בפייסבוק",
-				"link": "https://www.facebook.com/jobs/",
-				"link2": "",
-				"facebook_link": "https://www.facebook.com/jobs/"
-			}]
+			"links": [
+				{
+					"site_name": "לוח עבודות בפייסבוק",
+					"link": "https://www.facebook.com/jobs/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/jobs/"
+				}
+			]
 		}
 	]
 }
