@@ -125,6 +125,35 @@
 					"link": "https://www.bezeq.co.il/career/",
 					"link2": "",
 					"facebook_link": ""
+				},
+				{
+					"site_name": "הוט",
+					"link": "https://www.hot.net.il/heb/CareerMain/.aspx/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "יס",
+					"link": "https://career.yes.co.il/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "פרטנר",
+					"link": "https://www.partner.co.il/jobs/",
+					"link2": "",
+					"facebook_link": ""
+				}
+			]
+		},
+		{
+			"name": "אתרים של כל מיני חברות במשק",
+			"links": [	
+				{
+					"site_name": "avis - השכרת רכב",
+					"link": "https://www.avis.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/",
+					"link2": "",
+					"facebook_link": ""
 				}
 			]
 		},
