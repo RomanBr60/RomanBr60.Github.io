@@ -5,9 +5,21 @@
 			"links": [
 				{
 					"site_name": "נציב שירות המדינה",
-					"link": "https://www.gov.il/he/Departments/Topics/tenders_hr",
-					"link2": "https://ejobs.gov.il/gius/",
+					"link": "https://www.gov.il/he/Departments/civil_service_commission",
+					"link2": "",
 					"facebook_link": "https://www.facebook.com/israel.civil.service"
+				},
+				{
+					"site_name": "דרושים בשירות המדינה",
+					"link": "https://www.gov.il/he/Departments/Topics/tenders_hr",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "גיוס לשירות המדינה",
+					"link": "https://ejobs.gov.il/gius/",
+					"link2": "",
+					"facebook_link": ""
 				},
 				{
 					"site_name": "אתר מכרזים של המדינה",
@@ -18,6 +30,42 @@
 				{
 					"site_name": "משרות בשירות המדינה - אתר אזרחי",
 					"link": "http://www.govjob.co.il/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "משרד הבריאות",
+					"link": "https://www.health.gov.il/About/Careers/Pages/default.aspx/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "משרד ביטחון - משרות אזרחיות",
+					"link": "https://www.mod.gov.il/Citizen_Service/clalim/drushim/Pages/Jobs.aspx/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "שבכ",
+					"link": "https://www.shabak.gov.il/pages/career.html/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "המוסד",
+					"link": "https://www.mossad.gov.il/heb/careers/pages/all.aspx/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "ביטוח לאומי",
+					"link": "https://www.btl.gov.il/About/jobs/Pages/default.aspx/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "רשות הטבע והגנים",
+					"link": "https://www.btl.gov.il/About/jobs/Pages/default.aspx/",
 					"link2": "",
 					"facebook_link": ""
 				},
@@ -141,6 +189,36 @@
 				{
 					"site_name": "פרטנר",
 					"link": "https://www.partner.co.il/jobs/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "פלאפון",
+					"link": "https://www.pelephone.co.il/digitalsite/heb/jobs/",
+					"link2": "https://jobs.pelephone.co.il/",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "סלקום",
+					"link": "https://www.cellcom.co.il/careers/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "הוט מובייל",
+					"link": "https://www.partner.co.il/jobs/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "בזק בין לאומי",
+					"link": "https://www.bezeqint.net/online/career/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "בזק אונליין",
+					"link": "https://www.bezeqonline.co.il/%d7%9e%d7%a9%d7%a8%d7%95%d7%aa-%d7%a4%d7%a0%d7%95%d7%99%d7%95%d7%aa/",
 					"link2": "",
 					"facebook_link": ""
 				}
