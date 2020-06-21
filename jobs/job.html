@@ -17,16 +17,18 @@
 		<meta property="og:description" content="רשימת קישורים לחיפוש עבודה באינטרנט בכל סוגי האתרים הקיימים"/>
 		<meta property="og:url" content="https://romanbr60.github.io/jobs/job.html"/>
 		<meta property="og:title" content="קישורים לחיפוש עבודה באתרי אינטרנט"/>
-		<meta property="og:image" content="https://www.whatsapp.com/img/whatsapp-promo.png"/>		
 		<meta property="og:type" content="application"/>		
 		<meta property="og:site_name" content="רשימת אתרים" />
+		<meta property="og:image" content="img.jpg"/>		
 		<meta property="article:publisher" content="https://www.facebook.com/RonenBr60/" />
 		<meta property="article:author" content="https://www.facebook.com/RonenBr60/" />
 		<meta property="article:tag" content="עבודה" />
 		<meta property="article:tag" content="גיוס" />
 		<meta property="article:tag" content="חיפוש עבודה" />
 		
-		
+		<link rel="shortcut icon" href="img.jpg" type="image/jpeg" />
+		<link rel="apple-touch-icon" sizes="194x194" href="img.jpg" type="image/jpeg" />		
+
 		<title>רשימת אתרים</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
 		<style>
@@ -150,64 +152,66 @@
 		var jobs_data;
 		var content = "";
 		loadDoc();
+
 		function loadDoc() {
-			fetch(fileName,{ credentials: 'same-origin' })
-			  .then(response => response.json())
-			  .then(data => {
+			fetch(fileName, {
+					credentials: 'same-origin'
+				})
+				.then(response => response.json())
+				.then(data => {
 					jobs_data = data.job;
 					list.innerHTML = '';
 					for (var i = 0; i < jobs_data.length; i++) {
 						var li = document.createElement("li");
-						var attr = document.createAttribute("class");      
-						attr.value = "a";                           
-						li.setAttributeNode (attr);
-						li.innerHTML = + (i+1) + '. ' + jobs_data[i].name;
-						list.append (li);
+						var attr = document.createAttribute("class");
+						attr.value = "a";
+						li.setAttributeNode(attr);
+						li.innerHTML = +(i + 1) + '. ' + jobs_data[i].name;
+						list.append(li);
 						for (var j = 0; j < jobs_data[i].links.length; j++) {
 							var li = document.createElement("li");
-							var attr = document.createAttribute("class");      
-							attr.value = "b";                           
-							li.setAttributeNode (attr);
-							
-							var t = document.createTextNode((j+1) + ". ");
+							var attr = document.createAttribute("class");
+							attr.value = "b";
+							li.setAttributeNode(attr);
+
+							var t = document.createTextNode((j + 1) + ". ");
 							var aTag = document.createElement("a")
-							var attr = document.createAttribute("href");      
-							attr.value = jobs_data[i].links[j].link;                           
-							aTag.setAttributeNode (attr);
+							var attr = document.createAttribute("href");
+							attr.value = jobs_data[i].links[j].link;
+							aTag.setAttributeNode(attr);
 							aTag.innerHTML = jobs_data[i].links[j].site_name;
-							
-							li.append (t);
-							li.append (aTag);
-						
+
+							li.append(t);
+							li.append(aTag);
+
 							if (jobs_data[i].links[j].facebook_link != "") {
 								//li = document.createElement("li");
-								t = document.createTextNode(", ");						
-								li.append (t);
+								t = document.createTextNode(", ");
+								li.append(t);
 
 								aTag = document.createElement("a")
-								attr = document.createAttribute("href");      
-								attr.value = jobs_data[i].links[j].facebook_link;                           
-								aTag.setAttributeNode (attr);
+								attr = document.createAttribute("href");
+								attr.value = jobs_data[i].links[j].facebook_link;
+								aTag.setAttributeNode(attr);
 								aTag.innerHTML = "דף הפייסבוק";
-								li.append (aTag);
-							}							
-							list.append (li);
-							
+								li.append(aTag);
+							}
+							list.append(li);
+
 						}
-						
+
 						var li = document.createElement("li");
-						li.append (document.createElement("br"));
-						list.append (li);	
-							
+						li.append(document.createElement("br"));
+						list.append(li);
+
 					}
-					
+
 					//list.innerHTML = content;
-			  })
-			  .catch((error) => {
-				   console.error('Error:', error);
-			  });
+				})
+				.catch((error) => {
+					console.error('Error:', error);
+				});
 		}		
-		
 		</script>
 	
 	</body>
