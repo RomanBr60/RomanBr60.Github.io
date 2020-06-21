@@ -173,7 +173,7 @@
 			]
 		},
 		{
-			"name": "אתרים של חברות גדולות",
+			"name": "מפעלים וחברות",
 			"links": [
 				{
 					"site_name": "אלביט",
@@ -182,17 +182,36 @@
 					"facebook_link": "https://www.facebook.com/Elbitsystems/"
 				},
 				{
+					"site_name": "רפאל",
+					"link": "https://career.rafael.co.il/search/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
 					"site_name": "שטראוס",
 					"link": "https://www.strauss-group.co.il/career/jobs/",
 					"link2": "",
 					"facebook_link": ""
 				},
 				{
-					"site_name": "רפאל",
-					"link": "https://career.rafael.co.il/search/",
+					"site_name": "אסם",
+					"link": "https://www.osem.co.il/contact-service-center/jobs/",
 					"link2": "",
 					"facebook_link": ""
+				}
 				},
+				{
+					"site_name": "תנובה",
+					"link": "https://www.tnuva.co.il/career/work-in-tnuva/",
+					"link2": "https://career.tnuva.co.il/Positions",
+					"facebook_link": ""
+				}			
+
+			]
+		},
+		{
+			"name": "חברות תקשורת",
+			"links": [
 				{
 					"site_name": "בזק",
 					"link": "https://www.bezeq.co.il/career/",
@@ -250,7 +269,18 @@
 			]
 		},
 		{
-			"name": "אתרים של כל מיני חברות במשק",
+			"name": "רשתות קמעונאיות",
+			"links": [
+				{
+					"site_name": "ספור פארם",
+					"link": "https://jobs.super-pharm.co.il/",
+					"link2": "",
+					"facebook_link": ""
+				}
+			]
+		},	
+		{
+			"name": "חברות - שונות",
 			"links": [	
 				{
 					"site_name": "avis - השכרת רכב",
