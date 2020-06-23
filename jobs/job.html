@@ -182,10 +182,10 @@
 							li.append(aTag);
 
 							if (jobs_data[i].links[j].link2 != "") {
-								aTag = document.createElement("a")
 								t = document.createTextNode(", ");
 								li.append(t);
 
+								aTag = document.createElement("a")
 								aTag.setAttribute("href", jobs_data[i].links[j].link2);
 								aTag.innerHTML = aTag.innerHTML = "קישור2"; 
 								li.append(aTag);
