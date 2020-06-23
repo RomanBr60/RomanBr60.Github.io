@@ -192,7 +192,6 @@
 					"link": "https://www.ortal-hr.co.il/",
 					"link2": "",
 					"facebook_link": ""
-				}
 				},
 				{
 					"site_name": "דנאל משאבי אנוש",
@@ -217,6 +216,12 @@
 					"link": "https://l-b.co.il/",
 					"link2": "",
 					"facebook_link": "https://www.facebook.com/lynnbichler.jobfinder/"
+				},
+				{
+					"site_name": "seeV",
+					"link": "https://www.seev.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/Seevtech/"
 				}
 			]
 		},
