@@ -173,6 +173,54 @@
 			]
 		},
 		{
+			"name": "חברות כוח אדם",
+			"links": [
+				{
+					"site_name": "מעוף",
+					"link": "https://www.maof-hr.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/maofhr"
+				},
+				{
+					"site_name": "Manpower",
+					"link": "https://www.manpower.co.il/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "אורטל משאבי אנוש",
+					"link": "https://www.ortal-hr.co.il/",
+					"link2": "",
+					"facebook_link": ""
+				}
+				},
+				{
+					"site_name": "דנאל משאבי אנוש",
+					"link": "https://www.danel-jobs.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/danelhr/"
+				},
+				{
+					"site_name": "ORS משאבי אנוש",
+					"link": "https://www.ors.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/ORS-%D7%9E%D7%A9%D7%90%D7%91%D7%99-%D7%90%D7%A0%D7%95%D7%A9-297933440303791/"
+				},
+				{
+					"site_name": "תיגבור",
+					"link": "https://tigbur.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/tigbur/"
+				},
+				{
+					"site_name": "לין בלכר",
+					"link": "https://l-b.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/lynnbichler.jobfinder/"
+				}
+			]
+		},
+		{
 			"name": "מפעלים וחברות",
 			"links": [
 				{
@@ -291,7 +339,7 @@
 			]
 		},	
 		{
-			"name": "שונות",
+			"name": "חברות-שונות",
 			"links": [	
 				{
 					"site_name": "avis - השכרת רכב",
