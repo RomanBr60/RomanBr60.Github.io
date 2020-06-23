@@ -149,7 +149,7 @@
  
 		<script>
 		var fileName = "https://romanbr60.github.io/jobs/job2.json";
-		var jobs_data;
+		var jobs_data, aTag, t;
 		var content = "";
 		loadDoc();
 
@@ -163,36 +163,40 @@
 					list.innerHTML = '';
 					for (var i = 0; i < jobs_data.length; i++) {
 						var li = document.createElement("li");
-						var attr = document.createAttribute("class");
-						attr.value = "a";
-						li.setAttributeNode(attr);
-						li.innerHTML = +(i + 1) + '. ' + jobs_data[i].name;
+						li.setAttribute("class", "a");
+						li.innerHTML = +(i + 1) + '. ' + jobs_data[i].name + " - "  + jobs_data[i].links.length + " אתרים";
 						list.append(li);
 						for (var j = 0; j < jobs_data[i].links.length; j++) {
 							var li = document.createElement("li");
-							var attr = document.createAttribute("class");
-							attr.value = "b";
-							li.setAttributeNode(attr);
+							li.setAttribute("class", "b");
+							t = document.createTextNode((j + 1) + ". ");
+							li.append (t);
 
-							var t = document.createTextNode((j + 1) + ". ");
-							var aTag = document.createElement("a")
-							var attr = document.createAttribute("href");
-							attr.value = jobs_data[i].links[j].link;
-							aTag.setAttributeNode(attr);
-							aTag.innerHTML = jobs_data[i].links[j].site_name;
+							if (jobs_data[i].links[j].link != "") {
+								aTag = document.createElement("a")
+								aTag.setAttribute("href", jobs_data[i].links[j].link2);
+								aTag.innerHTML = aTag.innerHTML = jobs_data[i].links[j].site_name; 
+								li.append(aTag);
+							}
 
-							li.append(t);
 							li.append(aTag);
 
-							if (jobs_data[i].links[j].facebook_link != "") {
-								//li = document.createElement("li");
+							if (jobs_data[i].links[j].link2 != "") {
+								aTag = document.createElement("a")
 								t = document.createTextNode(", ");
 								li.append(t);
 
+								aTag.setAttribute("href", jobs_data[i].links[j].link2);
+								aTag.innerHTML = aTag.innerHTML = "קישור2"; 
+								li.append(aTag);
+							}
+							
+							if (jobs_data[i].links[j].facebook_link != "") {
 								aTag = document.createElement("a")
-								attr = document.createAttribute("href");
-								attr.value = jobs_data[i].links[j].facebook_link;
-								aTag.setAttributeNode(attr);
+								t = document.createTextNode(", ");
+								li.append(t);
+
+								aTag.setAttribute("href", jobs_data[i].links[j].facebook_link);
 								aTag.innerHTML = "דף הפייסבוק";
 								li.append(aTag);
 							}

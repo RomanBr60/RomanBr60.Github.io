@@ -271,21 +271,39 @@
 			"name": "רשתות קמעונאיות",
 			"links": [
 				{
+					"site_name": "שופרסל",
+					"link": "https://www.shufersal.co.il/tadmit/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/shufersalHR/"
+				},
+				{
 					"site_name": "ספור פארם",
 					"link": "https://jobs.super-pharm.co.il/",
 					"link2": "",
 					"facebook_link": ""
+				},
+				{
+					"site_name": "be - שופרסל",
+					"link": "https://www.bestore.co.il/articles/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D-Be-%D7%9E%D7%91%D7%99%D7%AA-%D7%A9%D7%95%D7%A4%D7%A8%D7%A1%D7%9C-102452861379041"
 				}
 			]
 		},	
 		{
-			"name": "חברות - שונות",
+			"name": "שונות",
 			"links": [	
 				{
 					"site_name": "avis - השכרת רכב",
 					"link": "https://www.avis.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/",
 					"link2": "",
 					"facebook_link": ""
+				},
+				{
+					"site_name": "מרכזה",
+					"link": "https://www.careers.merkaza.com/home",
+					"link2": "https://www.facebook.com/Merkaza-Careers-1952977484719708/",
+					"facebook_link": "https://www.facebook.com/merkazacareers.yarka"
 				}
 			]
 		},
