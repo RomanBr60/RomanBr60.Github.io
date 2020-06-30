@@ -169,6 +169,12 @@
 					"link": "https://ofanim.org.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/",
 					"link2": "",
 					"facebook_link": ""
+				},
+				{
+					"site_name": "אחריי",
+					"link": "http://www.aharai.org.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/",
+					"link2": "",
+					"facebook_link": ""
 				}
 			]
 		},
@@ -179,7 +185,7 @@
 					"site_name": "מעוף",
 					"link": "https://www.maof-hr.co.il/",
 					"link2": "",
-					"facebook_link": "https://www.facebook.com/maofhr"
+					"facebook_link": "https://www.facebook.com/maof.jobs/"
 				},
 				{
 					"site_name": "Manpower",
@@ -222,7 +228,14 @@
 					"link": "https://www.seev.co.il/",
 					"link2": "",
 					"facebook_link": "https://www.facebook.com/Seevtech/"
+				},
+				{
+					"site_name": "ל.מ. כוח אדם",
+					"link": "https://www.l-m.co.il/job/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/Seevtech/"
 				}
+
 			]
 		},
 		{

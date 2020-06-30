@@ -109,6 +109,14 @@
 				font-size: 15px;
 			}
 				
+			th, td { 
+				text-align: right; 
+
+				height: 1px;
+			}	
+			
+			th, tr, table, tbody, thead { border: none; direction: rtl; text-align: rtl;}
+			tr, table { width: 100%; }
 		</style>
 	</head>
 	<body>
@@ -118,7 +126,7 @@
 				
 		<div class="full-container">
   			
-			<div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4">
+			<div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
 				<div class="panel panel-danger">
 					
 					<div class="panel-heading">
@@ -129,7 +137,21 @@
 					
 					<div class="panel-body">
 						<div class = "has-success has-feedback">
-							<ul id='list' name='list'></ul>
+							<table class="table table-bordered table-hover borderless">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>שם</th>
+										<th>קישור1</th>
+										<th>קישור2</th>
+										<th>דף פייסבוק</th>
+									</tr>
+								</thead>
+								<tbody id="list" name="list">
+								</tbody>
+ 							
+							
+							</table>
 						</div>
 					</div>
 					<div class="panel-footer">
@@ -144,7 +166,7 @@
  
 		<script>
 		var fileName = "https://romanbr60.github.io/jobs/job2.json";
-		var jobs_data, aTag, t, li;
+		var jobs_data, aTag, t, li, tr, th, td;
 		var content = "";
 		loadDoc();
 
@@ -157,52 +179,66 @@
 					jobs_data = data.job;
 					list.innerHTML = '';
 					for (var i = 0; i < jobs_data.length; i++) {
-						li = document.createElement("li");
-						li.setAttribute("class", "a heading");
-						li.innerHTML = +(i + 1) + '. ' + jobs_data[i].name + " - "  + jobs_data[i].links.length + " אתרים";
-						list.appendChild(li);
+						tr = document.createElement("tr");
+						th = document.createElement("th");
+						th.setAttribute("class", "a heading");
+						th.setAttribute("colspan", "100%");
+						th.innerHTML = +(i + 1) + '. ' + jobs_data[i].name + " - "  + jobs_data[i].links.length + " אתרים";
+						tr.appendChild (th);
+						list.appendChild(tr);
 						
 						for (var j = 0; j < jobs_data[i].links.length; j++) {
-							li = document.createElement("li");
-							li.setAttribute("class", "b");
-							t = document.createTextNode((j + 1) + ". ");
-							li.appendChild (t);
+							tr = document.createElement("tr");
+							td = document.createElement("td");
+							td.setAttribute("class", "b");
+							t = document.createTextNode((j + 1));
+							td.appendChild (t)
+							tr.appendChild (td);
 
+							td = document.createElement("td");
+							t = document.createTextNode(jobs_data[i].links[j].site_name);
+							td.appendChild (t)
+							tr.appendChild (td);
+
+
+							td = document.createElement("td");
 							if (jobs_data[i].links[j].link != "") {
 								aTag = document.createElement("a")
-								aTag.setAttribute("href", jobs_data[i].links[j].link2);
-								aTag.innerHTML = aTag.innerHTML = jobs_data[i].links[j].site_name; 
-								li.appendChild(aTag);
+								aTag.setAttribute("href", jobs_data[i].links[j].link);
+								aTag.innerHTML = aTag.innerHTML = "קישור1"; 
+								td.appendChild(aTag);
 							}
 
-							li.appendChild(aTag);
+							tr.appendChild(td);
 
+							td = document.createElement("td");
 							if (jobs_data[i].links[j].link2 != "") {
-								t = document.createTextNode(", ");
-								li.appendChild(t);
-
 								aTag = document.createElement("a")
 								aTag.setAttribute("href", jobs_data[i].links[j].link2);
 								aTag.innerHTML = aTag.innerHTML = "קישור2"; 
-								li.appendChild(aTag);
+								td.appendChild(aTag);
 							}
+							tr.appendChild(td);
 							
+							td = document.createElement("td");
 							if (jobs_data[i].links[j].facebook_link != "") {
 								aTag = document.createElement("a")
-								t = document.createTextNode(", ");
-								li.appendChild(t);
-
 								aTag.setAttribute("href", jobs_data[i].links[j].facebook_link);
-								aTag.innerHTML = "דף הפייסבוק";
-								li.appendChild(aTag);
+								aTag.innerHTML = aTag.innerHTML = "פייסבוק"; 
+								td.appendChild(aTag);
 							}
-							list.appendChild(li);
+							tr.appendChild(td);
+							
+							list.appendChild(tr);
 
 						}
 
-						li = document.createElement("li");
-						li.appendChild(document.createElement("br"));
-						list.appendChild(li);
+						tr = document.createElement("tr");
+						th = document.createElement("th");
+						th.setAttribute("colspan", "100%");
+						th.innerHTML = ""
+						tr.appendChild (th);
+						list.appendChild(tr);
 
 					}
 
