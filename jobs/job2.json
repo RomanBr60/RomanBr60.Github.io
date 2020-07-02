@@ -179,7 +179,7 @@
 			]
 		},
 		{
-			"name": "חברות כוח אדם",
+			"name": "חברות כוח אדם כלליות",
 			"links": [
 				{
 					"site_name": "מעוף",
@@ -224,18 +224,41 @@
 					"facebook_link": "https://www.facebook.com/lynnbichler.jobfinder/"
 				},
 				{
+					"site_name": "ל.מ. כוח אדם",
+					"link": "https://www.l-m.co.il/job/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/lm.co.il/"
+				}
+
+			]
+		},
+		{
+			"name": "חברות כוח אדם של הייטק",
+			"links": [
+				{
 					"site_name": "seeV",
 					"link": "https://www.seev.co.il/",
 					"link2": "",
 					"facebook_link": "https://www.facebook.com/Seevtech/"
 				},
 				{
-					"site_name": "ל.מ. כוח אדם",
-					"link": "https://www.l-m.co.il/job/",
+					"site_name": "קבוצת נישה",
+					"link": "https://www.nisha.co.il/",
 					"link2": "",
-					"facebook_link": "https://www.facebook.com/Seevtech/"
+					"facebook_link": "https://www.facebook.com/nishagroupltd/"
+				},
+				{
+					"site_name": "CPSJOBS",
+					"link": "https://www.cps.co.il/search_page/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/cpsjobs/"
+				},
+				{
+					"site_name": "CPSJOBS",
+					"link": "https://www.atidbyisum.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/atidbyisum/"
 				}
-
 			]
 		},
 		{
@@ -370,6 +393,12 @@
 					"link": "https://www.careers.merkaza.com/home",
 					"link2": "https://www.facebook.com/Merkaza-Careers-1952977484719708/",
 					"facebook_link": "https://www.facebook.com/merkazacareers.yarka"
+				},
+				{
+					"site_name": "הולמס פלייס",
+					"link": "",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/דרושים-קבוצת-הולמס-פלייס-1458000094512749"
 				}
 			]
 		},
