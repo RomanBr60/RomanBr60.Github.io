@@ -116,9 +116,7 @@
 					"site_name": "ש.ל.ה משאבי אנוש",
 					"link": "https://www.shilajobs.co.il",
 					"link2": "",
-					"facebook_link": "https://www.facebook.com/clalit.careers/",
-					"tel1": "03-5434230",
-					"tel2": "03-5434228"
+					"facebook_link": "https://www.facebook.com/clalit.careers/"
 				},
 				{
 					"site_name": "קופת חולים לאומית",
@@ -144,16 +142,28 @@
 			"name": "אתרים שפועלים מטעם מועצות",
 			"links": [
 				{
-					"site_name": "לוח דרושים באזור עמק הירדן",
-					"link": "http://www.j-v.co.il/luah.asp?cat=1&all=true/",
-					"link2": "",
-					"facebook_link": ""
-				},
-				{
 					"site_name": "משרות באזור תעשייה תפן",
 					"link": "https://www.tefen.muni.il/index.php?dir=site&page=jobs&op=category&cs=6030",
 					"link2": "",
 					"facebook_link": "https://www.facebook.com/migdaltefen/"
+				},
+				{
+					"site_name": "פארק תעשיות משגב",
+					"link": "https://www.mip.org.il/%d7%93%d7%a8%d7%95%d7%a9%d7%99%d7%9d/",
+					"link2": "",
+					"facebook_link": ""
+				},
+				{
+					"site_name": "פארק תעשיות בר לב",
+					"link": "https://barlevpark.co.il/he/jobs/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/maavarimmaayanotkinneret/"
+				},
+				{
+					"site_name": "מרכז תעסוקה משגב",
+					"link": "http://www.jobin-misgav.org.il/16/",
+					"link2": "",
+					"facebook_link": ""
 				}
 			]
 		},
@@ -164,7 +174,25 @@
 					"site_name": "מעברים בעמק",
 					"link": "https://www.maavarim-baemek.org.il/cgi-webaxy/sal/sal.pl?lang=he&ID=283725_mv_emekizrael&dbid=mb_jobs&act=search2/",
 					"link2": "",
-					"facebook_link": ""
+					"facebook_link": "https://www.facebook.com/MaavarimBaemek"
+				},
+				{
+					"site_name": "מעברים מעיינות כנרת",
+					"link": "https://www.mmk.org.il/he/jobs/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/maavarimmaayanotkinneret/"
+				},
+				{
+					"site_name": "מעברים כרמל מנשה",
+					"link": "http://www.mcmc.org.il/%D7%9C%D7%95%D7%97-%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/mcmc.org.il/"
+				},
+				{
+					"site_name": "מעברים גליל מערבי",
+					"link": "https://www.mwg.org.il/he/jobs/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/%D7%9E%D7%A2%D7%91%D7%A8%D7%99%D7%9D-%D7%92%D7%9C%D7%99%D7%9C-%D7%9E%D7%A2%D7%A8%D7%91%D7%99-1471044189881257/"
 				},
 				{
 					"site_name": "טכניון",
