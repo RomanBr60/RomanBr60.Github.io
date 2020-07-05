@@ -288,6 +288,24 @@
 					"link": "http://www.sheifot.com/drushim/",
 					"link2": "",
 					"facebook_link": "https://www.facebook.com/sheifotisrael/"
+				},
+				{
+					"site_name": "אתגר משאבי אנוש",
+					"link": "http://www.etgar-hr.com/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D+%D7%99%D7%95%D7%A2%D7%A6%D7%99%D7%9D+%D7%94%D7%A9%D7%9E%D7%94/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/%D7%90%D7%AA%D7%92%D7%A8-%D7%9E%D7%A9%D7%90%D7%91%D7%99-%D7%90%D7%A0%D7%95%D7%A9-205222022945305/"
+				},
+				{
+					"site_name": "אדם מילא",
+					"link": "https://adam-milo.co.il/job-seekers/%D7%9E%D7%A9%D7%A8%D7%95%D7%AA-%D7%91%D7%90%D7%93%D7%9D-%D7%9E%D7%99%D7%9C%D7%90/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/adam.milo.il/"
+				},
+				{
+					"site_name": "ירימי",
+					"link": "http://www.yarimi.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/yarimi.hasama/"
 				}
 			]
 		},
@@ -341,7 +359,26 @@
 					"link": "https://www.gotfriends.co.il/jobslobby/",
 					"link2": "",
 					"facebook_link": "https://www.facebook.com/GotFriend/"
+				},
+				{
+					"site_name": "פארמה ג'וב",
+					"link": "http://www.pharma-job.co.il/jobs/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/pharma.job.co.il/"
+				},
+				{
+					"site_name": "דיאלוג השמה",
+					"link": "https://www.dialog.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/Dialog.Jobs/"
+				},
+				{
+					"site_name": "ayeletech",
+					"link": "https://www.ayeletech.co.il/jobs/",
+					"link2": "",
+					"facebook_link": ""
 				}
+
 			]
 		},
 		{
