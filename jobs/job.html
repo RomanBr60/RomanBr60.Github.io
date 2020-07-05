@@ -155,6 +155,7 @@
 				.then(response => response.json())
 				.then(data => {
 					jobs_data = data.job;
+					console.log (typeof jobs_data);
 					list.innerHTML = '';
 					for (var i = 0; i < jobs_data.length; i++) {
 						li = document.createElement("li");

@@ -264,12 +264,35 @@
 					"link": "https://www.l-m.co.il/job/",
 					"link2": "",
 					"facebook_link": "https://www.facebook.com/lm.co.il/"
+				},
+				{
+					"site_name": "חבר הון אנושי",
+					"link": "https://www.hever.co.il/search-job/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/HeverJobs/"
+				},
+				{
+					"site_name": "תפקיד פלוס",
+					"link": "https://tafkid-plus.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/jobs.tafkidplus/"
+				},
+				{
+					"site_name": "צעדים ייעוץ והשמה",
+					"link": "http://www.tzeadim.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/tzaadim.find.jobs/"
+				},
+				{
+					"site_name": "שאיפות הכוונה והשמה",
+					"link": "http://www.sheifot.com/drushim/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/sheifotisrael/"
 				}
-
 			]
 		},
 		{
-			"name": "חברות כוח אדם של הייטק",
+			"name": "חברות כוח אדם של הייטק ובכירים",
 			"links": [
 				{
 					"site_name": "seeV",
@@ -290,10 +313,34 @@
 					"facebook_link": "https://www.facebook.com/cpsjobs/"
 				},
 				{
-					"site_name": "CPSJOBS",
+					"site_name": "יישום פתרונות אנושיים בעמ",
 					"link": "https://www.atidbyisum.co.il/",
 					"link2": "",
 					"facebook_link": "https://www.facebook.com/atidbyisum/"
+				},
+				{
+					"site_name": "וי שרותי אבחון והשמה",
+					"link": "http://www.vpower.co.il/search.asp/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/vpower.co.il/"
+				},
+				{
+					"site_name": "אסמרטק",
+					"link": "https://www.esr.co.il/",
+					"link2": "https://www.cyber-jobs.co.il/",
+					"facebook_link": "https://www.facebook.com/EsrCyber/"
+				},
+				{
+					"site_name": "פסגות משאבי אנוש",
+					"link": "https://psagothr.co.il/jobs/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/psagothr.co.il/"
+				},
+				{
+					"site_name": "GotFriends",
+					"link": "https://www.gotfriends.co.il/jobslobby/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/GotFriend/"
 				}
 			]
 		},
