@@ -134,7 +134,7 @@
 					"site_name": "קופת חולים מכבי",
 					"link": "https://www.maccabi4u.co.il/10886-he/Maccabi.aspx/",
 					"link2": "",
-					"facebook_link": ""
+					"facebook_link": "https://www.facebook.com/%D7%94%D7%90%D7%A0%D7%A9%D7%99%D7%9D-%D7%A9%D7%9C-%D7%9E%D7%9B%D7%91%D7%99-102335697831099/"
 				}
 			]
 		},
@@ -306,11 +306,17 @@
 					"link": "http://www.yarimi.co.il/",
 					"link2": "",
 					"facebook_link": "https://www.facebook.com/yarimi.hasama/"
+				},
+				{
+					"site_name": "פתרונות",
+					"link": "https://www.pitronot-hr.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/pitronot.hr/"
 				}
 			]
 		},
 		{
-			"name": "חברות כוח אדם של הייטק ובכירים",
+			"name": "חברות כוח אדם של הייטק ותפקידים איכותיים",
 			"links": [
 				{
 					"site_name": "seeV",
@@ -377,6 +383,30 @@
 					"link": "https://www.ayeletech.co.il/jobs/",
 					"link2": "",
 					"facebook_link": ""
+				},
+				{
+					"site_name": "גל מדיקל",
+					"link": "https://www.gal-hr.co.il/?pg=positions&CategoryID=162/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/GalHRLiatGal/"
+				},
+				{
+					"site_name": "APM",
+					"link": "http://www.apm.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/Apm.Jobs.In.Israel"
+				},
+				{
+					"site_name": "SmartJob",
+					"link": "https://www.smartjob.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/SmartJOB.co.il/"
+				},
+				{
+					"site_name": "JombaHR",
+					"link": "https://www.jomba.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/Jomba.HR/"
 				}
 
 			]
@@ -519,6 +549,12 @@
 					"link": "",
 					"link2": "",
 					"facebook_link": "https://www.facebook.com/דרושים-קבוצת-הולמס-פלייס-1458000094512749"
+				},
+				{
+					"site_name": "בן ביטחון",
+					"link": "",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/hrben1989/"
 				}
 			]
 		},
