@@ -347,6 +347,30 @@
                     "link":"http://www.nextleader.co.il/",
                     "link2":"",
                     "facebook_link":"https://www.facebook.com/Next-Leader-%D7%97%D7%91%D7%A8%D7%AA-%D7%94%D7%A9%D7%9E%D7%94-318677574935425/"
+                },
+                {
+                    "site_name":"NiliJobs",
+                    "link":"http://www.nilijobs.co.il/",
+                    "link2":"",
+                    "facebook_link":""
+                },
+                {
+                    "site_name":"HR Search",
+                    "link":"https://www.hrsearch.co.il/",
+                    "link2":"",
+                    "facebook_link":"https://www.facebook.com/hrsearchtourismjobs/"
+                },
+                {
+                    "site_name":"D.NA",
+                    "link":"https://d.najob.co.il/",
+                    "link2":"",
+                    "facebook_link":"https://www.facebook.com/D.NAhasama/"
+                },
+                {
+                    "site_name":"RUNNER",
+                    "link":"http://runner.co.il/",
+                    "link2":"",
+                    "facebook_link":"https://www.facebook.com/cvrunner/"
                 }
             ]
         },
@@ -466,6 +490,30 @@
                     "link":"http://www.qhr.co.il/",
                     "link2":"",
                     "facebook_link":"https://www.facebook.com/QhrHrServices/"
+                },
+                {
+                    "site_name":"כיוון",
+                    "link":"http://kivoon.biz/",
+                    "link2":"",
+                    "facebook_link":"https://www.facebook.com/kivoon.biz/"
+                },
+                {
+                    "site_name":"העתיד שלך",
+                    "link":"http://www.yourfuture.co.il/",
+                    "link2":"",
+                    "facebook_link":""
+                },
+                {
+                    "site_name":"Quest HR",
+                    "link":"https://www.quest-hr.com/he/",
+                    "link2":"",
+                    "facebook_link":"https://www.facebook.com/questHR/"
+                },
+                {
+                    "site_name":"מאגרי אנוש",
+                    "link":"https://enosh.co.il/",
+                    "link2":"",
+                    "facebook_link":"https://www.facebook.com/maagreyenosh/"
                 }
             ]
         },
@@ -511,7 +559,13 @@
                     "site_name":"Sqlink",
                     "link":"https://www.sqlink.com/%D7%9E%D7%A9%D7%A8%D7%95%D7%AA-%D7%94%D7%99%D7%99%D7%98%D7%A7/",
                     "link2":"",
-                    "facebook_link":"https://www.facebook.com/Elbitsystems/"
+                    "facebook_link":"https://www.facebook.com/sqlink/"
+                }
+                {
+                    "site_name":"Matrix",
+                    "link":"https://www.matrix.co.il/",
+                    "link2":"",
+                    "facebook_link":"https://www.facebook.com/Matrixtechnology/"
                 }
             ]
         },
@@ -676,12 +730,30 @@
                     "link":"https://www.ben-security.co.il/",
                     "link2":"",
                     "facebook_link":"https://www.facebook.com/hrben1989/"
+                },
+                {
+                    "site_name":"תקשוב",
+                    "link":"http://www.tikshoov.co.il/",
+                    "link2":"",
+                    "facebook_link":"https://www.facebook.com/tikshoov1/"
+                },
+                {
+                    "site_name":"באבקום",
+                    "link":"https://babcomcenters.com/he/",
+                    "link2":"",
+                    "facebook_link":"https://www.facebook.com/babcom.centers/"
                 }
             ]
         },
         {
             "name":"פרסומים בדפי פייסבוק",
             "links":[
+                {
+                    "site_name":"לוח עבודות בפייסבוק",
+                    "link":"https://www.facebook.com/jobs/",
+                    "link2":"",
+                    "facebook_link":""
+                },			
                 {
                     "site_name":"דרושים טבריה",
                     "link":"https://www.facebook.com/droshimtiberia/",
@@ -693,17 +765,6 @@
                     "link":"https://www.facebook.com/karmiel.hon/",
                     "link2":"",
                     "facebook_link":""
-                }
-            ]
-        },
-        {
-            "name":"אחרים",
-            "links":[
-                {
-                    "site_name":"לוח עבודות בפייסבוק",
-                    "link":"https://www.facebook.com/jobs/",
-                    "link2":"",
-                    "facebook_link":"https://www.facebook.com/jobs/"
                 }
             ]
         }
