@@ -108,7 +108,7 @@
 			}	
 			
 			th, tr, table, tbody, thead { border: none; direction: rtl; text-align: rtl;}
-			tr, table { width: 100%; }
+			td { max-width: 20px; }  
 		</style>
 	</head>
 	<body>
@@ -119,6 +119,7 @@
 		<div class="full-container">
   			
 			<div class="">
+			<!--<div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4">-->
 				<div class="panel panel-danger">
 					
 					<div class="panel-heading">
@@ -132,8 +133,7 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>שם</th>
-									<th>קישור1</th>
+									<th>שם + קישור1</th>
 									<th>קישור2</th>
 									<th>דף פייסבוק</th>
 								</tr>
@@ -145,7 +145,7 @@
 						</table>
 					</div>
 					<div class="panel-footer">
-					האתר עוצב ע"י
+					האתר עוצב ע"י <a href="https://www.facebook.com/RonenBr60">רונן ברברמן</a> עבור הקבוצה <a href = "https://www.facebook.com/groups/192068707952753/">דרושים לעבודה נוף הגליל, עפולה, טבריה, מגדל העמק והסביבה הקרובה</a>
 					</div>
 					
 				</div>
@@ -189,17 +189,17 @@
 							td.appendChild (t)
 							tr.appendChild (td);
 
-							td = document.createElement("td");
+							/*td = document.createElement("td");
 							t = document.createTextNode(jobs_data[i].links[j].site_name);
 							td.appendChild (t)
-							tr.appendChild (td);
+							tr.appendChild (td);*/
 
 
 							td = document.createElement("td");
 							if (jobs_data[i].links[j].link != "") {
 								aTag = document.createElement("a")
 								aTag.setAttribute("href", jobs_data[i].links[j].link);
-								aTag.innerHTML = aTag.innerHTML = "קישור1"; 
+								aTag.innerHTML = aTag.innerHTML = jobs_data[i].links[j].site_name; 
 								td.appendChild(aTag);
 							}
 
@@ -218,7 +218,7 @@
 							if (jobs_data[i].links[j].facebook_link != "") {
 								aTag = document.createElement("a")
 								aTag.setAttribute("href", jobs_data[i].links[j].facebook_link);
-								aTag.innerHTML = aTag.innerHTML = "פייסבוק"; 
+								aTag.innerHTML = aTag.innerHTML = "דף פייסבוק"; 
 								td.appendChild(aTag);
 							}
 							tr.appendChild(td);
