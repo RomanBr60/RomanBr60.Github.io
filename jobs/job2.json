@@ -124,7 +124,7 @@
         },
         {
           "site_name": "ש.ל.ה משאבי אנוש",
-          "link": "https://www.shilajobs.co.il",
+          "link": "https://www.shilajobs.co.il/",
           "link2": "",
           "facebook_link": "",
           "linkedIn_link": ""
@@ -670,6 +670,13 @@
           "link": "https://www.drushim.co.il/",
           "link2": "",
           "facebook_link": "https://www.facebook.com/drushim.co.il/",
+          "linkedIn_link": ""
+        },
+        {
+          "site_name": "HotJob",
+          "link": "https://www.hotjob.co.il/",
+          "link2": "",
+          "facebook_link": "",
           "linkedIn_link": ""
         }
       ]
