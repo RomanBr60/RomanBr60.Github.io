@@ -444,6 +444,27 @@
           "link2": "",
           "facebook_link": "https://www.facebook.com/profile.php?id=100052965773787/",
           "linkedIn_link": ""
+        },
+        {
+          "site_name": "רם ק.ר.מ",
+          "link": "http://ramkrm.co.il/safecms/",
+          "link2": "",
+          "facebook_link": "",
+          "linkedIn_link": ""
+        },
+        {
+          "site_name": "עמיתים",
+          "link": "https://amitim-hr.co.il/",
+          "link2": "",
+          "facebook_link": "https://www.facebook.com/amitim.hr/",
+          "linkedIn_link": ""
+        },
+        {
+          "site_name": "מלמוד השמה",
+          "link": "https://get-marketing.co.il/malamudhr/",
+          "link2": "",
+          "facebook_link": "https://www.facebook.com/galRecruiter/",
+          "linkedIn_link": ""
         }
       ]
     },
@@ -634,6 +655,18 @@
         }
       ]
     },
+    {
+      "name": "חברות וארגונים בתחום התעסוקה",
+      "links": [
+        {
+          "site_name": "מעגלים",
+          "link": "https://www.magalim.org.il/",
+          "link2": "",
+          "facebook_link": "",
+          "linkedIn_link": ""
+        }	  
+      ]
+    }, 
     {
       "name": "אתרים לחיפוש עבודה",
       "links": [
@@ -861,6 +894,13 @@
         {
           "site_name": "avis - השכרת רכב",
           "link": "https://www.avis.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/",
+          "link2": "",
+          "facebook_link": "",
+          "linkedIn_link": ""
+        },
+        {
+          "site_name": "Eldan",
+          "link": "https://www.eldan.co.il/he/career-region/jobs-category-public/",
           "link2": "",
           "facebook_link": "",
           "linkedIn_link": ""
