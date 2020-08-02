@@ -143,7 +143,7 @@
  
 		<script>
 		var fileName = "https://romanbr60.github.io/jobs/job2.json";
-		var jobs_data, aTag, t, li, cnt = 0, title;
+		var jobs_data, aTag, t, li, cnt = 0, title, msg;
 		var content = "";
 		loadDoc();
 
@@ -154,12 +154,11 @@
 				.then(response => response.json())
 				.then(data => {
 					jobs_data = data.job;
-					console.log (typeof jobs_data);
 					list.innerHTML = '';
 
-					title = document.createElement("li");
-					title.setAttribute("class", "a");
-					list.appendChild(title);
+					var msg = document.createElement("li");
+					msg.setAttribute("class", "a");
+					list.appendChild(msg);
 
 					for (var i = 0; i < jobs_data.length; i++) {
 						li = document.createElement("li");
@@ -215,7 +214,7 @@
 
 					}
 
-					title.innerHTML = "נמצאו " + cnt + " חברות";
+					msg.innerHTML = "נמצאו " + cnt + " חברות";
 				})
 				.catch((error) => {
 					console.error('Error:', error);
