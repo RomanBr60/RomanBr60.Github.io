@@ -688,6 +688,13 @@
 					"link2": "",
 					"facebook_link": "",
 					"linkedIn_link": ""
+				},
+				{
+					"site_name": "Eller's",
+					"link": "https://www.ellers.co.il/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/ellers.co.il/",
+					"linkedIn_link": ""
 				}
 			]
 		},
@@ -934,6 +941,13 @@
 					"linkedIn_link": ""
 				},
 				{
+					"site_name": "אלבר",
+					"link": "https://www.albar.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/",
+					"link2": "",
+					"facebook_link": "",
+					"linkedIn_link": ""
+				},
+				{
 					"site_name": "מרכזה",
 					"link": "https://www.careers.merkaza.com/home",
 					"link2": "https://www.facebook.com/Merkaza-Careers-1952977484719708/",
@@ -989,6 +1003,13 @@
 				{
 					"site_name": "רשות מקדמת תעסוקה - מרכז הון אנושי כרמיאל",
 					"link": "https://www.facebook.com/karmiel.hon/",
+					"link2": "",
+					"facebook_link": "",
+					"linkedIn_link": ""
+				},
+				{
+					"site_name": "דרושים - צפון",
+					"link": "https://www.facebook.com/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D-%D7%9E%D7%97%D7%95%D7%96-%D7%94%D7%A6%D7%A4%D7%95%D7%9F-%D7%A0%D7%A4%D7%AA-%D7%99%D7%96%D7%A8%D7%A2%D7%90%D7%9C-%D7%A0%D7%A4%D7%AA-%D7%A6%D7%A4%D7%AA-%D7%A0%D7%A4%D7%AA-%D7%A2%D7%9B%D7%95-%D7%A0%D7%A4%D7%AA-%D7%9B%D7%A0%D7%A8%D7%AA-%D7%A8%D7%9E%D7%AA-%D7%94%D7%92%D7%95%D7%9C%D7%9F-1169679953202957/",
 					"link2": "",
 					"facebook_link": "",
 					"linkedIn_link": ""
