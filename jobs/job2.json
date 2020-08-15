@@ -47,7 +47,7 @@
 					"site_name": "שבכ",
 					"link": "https://www.shabak.gov.il/pages/career.html/",
 					"link2": "",
-					"facebook_link": "",
+					"facebook_link": "https://www.facebook.com/SHABAKCAREER/",
 					"linkedIn_link": ""
 				},
 				{
@@ -927,6 +927,12 @@
 		{
 			"name": "חברות-שונות",
 			"links": [{
+					"site_name": "Amarel",
+					"link": "https://www.amarel.net/%d7%9e%d7%a9%d7%a8%d7%95%d7%aa/",
+					"link2": "",
+					"facebook_link": "https://www.facebook.com/Amarel.LTD/",
+					"linkedIn_link": ""
+				},
 					"site_name": "avis - השכרת רכב",
 					"link": "https://www.avis.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/",
 					"link2": "",

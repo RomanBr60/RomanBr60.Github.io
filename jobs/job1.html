@@ -108,7 +108,7 @@
 			}	
 			
 			th, tr, table, tbody, thead { border: none; direction: rtl; text-align: rtl;}
-			td { max-width: 20px; }  
+			tr, table { width: 100%; }
 		</style>
 	</head>
 	<body>
@@ -118,8 +118,8 @@
 				
 		<div class="full-container">
   			
-			<div class="">
-			<!--<div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4">-->
+			<div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
+				
 				<div class="panel panel-danger">
 					
 					<div class="panel-heading">
@@ -133,7 +133,8 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>שם + קישור1</th>
+									<th>שם</th>
+									<th>קישור1</th>
 									<th>קישור2</th>
 									<th>דף פייסבוק</th>
 								</tr>
@@ -189,17 +190,17 @@
 							td.appendChild (t)
 							tr.appendChild (td);
 
-							/*td = document.createElement("td");
+							td = document.createElement("td");
 							t = document.createTextNode(jobs_data[i].links[j].site_name);
 							td.appendChild (t)
-							tr.appendChild (td);*/
+							tr.appendChild (td);
 
 
 							td = document.createElement("td");
 							if (jobs_data[i].links[j].link != "") {
 								aTag = document.createElement("a")
 								aTag.setAttribute("href", jobs_data[i].links[j].link);
-								aTag.innerHTML = aTag.innerHTML = jobs_data[i].links[j].site_name; 
+								aTag.innerHTML = aTag.innerHTML = "קישור1"; 
 								td.appendChild(aTag);
 							}
 
@@ -218,7 +219,7 @@
 							if (jobs_data[i].links[j].facebook_link != "") {
 								aTag = document.createElement("a")
 								aTag.setAttribute("href", jobs_data[i].links[j].facebook_link);
-								aTag.innerHTML = aTag.innerHTML = "דף פייסבוק"; 
+								aTag.innerHTML = aTag.innerHTML = "פייסבוק"; 
 								td.appendChild(aTag);
 							}
 							tr.appendChild(td);
