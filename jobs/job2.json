@@ -933,6 +933,7 @@
 					"facebook_link": "https://www.facebook.com/Amarel.LTD/",
 					"linkedIn_link": ""
 				},
+				{
 					"site_name": "avis - השכרת רכב",
 					"link": "https://www.avis.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/",
 					"link2": "",
@@ -989,8 +990,7 @@
 					"linkedIn_link": ""
 				}
 			]
-		},
-		{
+		}, {
 			"name": "פרסומים בדפי פייסבוק",
 			"links": [{
 					"site_name": "לוח עבודות בפייסבוק",
